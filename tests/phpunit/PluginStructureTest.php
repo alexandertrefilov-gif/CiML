@@ -48,4 +48,46 @@ final class PluginStructureTest extends TestCase {
 			);
 		}
 	}
+
+	public function test_post_type_registration_function_exists(): void {
+		require_once $this->plugin_dir . '/includes/post-types/register.php';
+
+		$this->assertTrue( function_exists( 'ciml_core_register_post_types' ) );
+		$this->assertTrue( function_exists( 'ciml_core_get_public_post_types' ) );
+	}
+
+	public function test_post_type_registration_is_hooked_to_init(): void {
+		$contents = file_get_contents( $this->plugin_dir . '/includes/post-types/register.php' );
+
+		$this->assertIsString( $contents );
+		$this->assertMatchesRegularExpression(
+			"/add_action\\(\\s*'init'\\s*,\\s*'ciml_core_register_post_types'\\s*\\)/",
+			$contents
+		);
+	}
+
+	public function test_allowed_public_post_type_list_contains_exactly_five_cpts(): void {
+		require_once $this->plugin_dir . '/includes/post-types/register.php';
+
+		$expected_post_types = array(
+			'ciml_belief_item',
+			'ciml_ministry',
+			'ciml_sermon',
+			'ciml_event',
+			'ciml_team_member',
+		);
+
+		$actual_post_types = array_keys( ciml_core_get_public_post_types() );
+
+		sort( $expected_post_types );
+		sort( $actual_post_types );
+
+		$this->assertSame( $expected_post_types, $actual_post_types );
+	}
+
+	public function test_contact_message_post_type_is_not_registered(): void {
+		require_once $this->plugin_dir . '/includes/post-types/register.php';
+
+		$this->assertArrayNotHasKey( 'ciml_contact_message', ciml_core_get_public_post_types() );
+	}
 }
