@@ -32,6 +32,10 @@ wp-config.php
 # Log files
 *.log
 
+# Local Composer/PHPUnit tooling artifacts
+/vendor/
+/.phpunit.cache/
+
 # htaccess
 /.htaccess
 
