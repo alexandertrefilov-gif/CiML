@@ -26,6 +26,11 @@ get_header();
 	get_template_part( 'template-parts/sections/sermons' );
 	get_template_part( 'template-parts/sections/events' );
 	get_template_part( 'template-parts/sections/team' );
+	get_template_part( 'template-parts/sections/donation' );
+	get_template_part( 'template-parts/sections/contact' );
+	get_template_part( 'template-parts/sections/admin-preview' );
+	get_template_part( 'template-parts/sections/agenda' );
+	get_template_part( 'template-parts/sections/legal' );
 	?>
 </main>
 

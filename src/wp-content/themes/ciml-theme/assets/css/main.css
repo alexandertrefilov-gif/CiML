@@ -548,6 +548,245 @@ body {
 	line-height: 1.55;
 }
 
+.cta {
+	background: linear-gradient(135deg, var(--ciml-navy-dark), var(--ciml-navy));
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+.cta::before {
+	background: radial-gradient(circle, rgba(200, 146, 42, 0.22), transparent 70%);
+	content: "";
+	height: 420px;
+	position: absolute;
+	right: -120px;
+	top: -120px;
+	width: 420px;
+}
+
+.cta .container {
+	position: relative;
+	z-index: 1;
+}
+
+.cta h2 {
+	color: #fff;
+	font-family: var(--ciml-head);
+	font-size: clamp(2rem, 4.5vw, 3.4rem);
+	line-height: 1.15;
+	margin: 0 0 1rem;
+}
+
+.cta p {
+	color: rgba(255, 255, 255, 0.78);
+	line-height: 1.7;
+	max-width: 64ch;
+}
+
+.btn-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.9rem;
+	margin-top: 1.5rem;
+}
+
+.btn {
+	align-items: center;
+	border: 2px solid transparent;
+	border-radius: 12px;
+	display: inline-flex;
+	font-size: 0.88rem;
+	font-weight: 700;
+	gap: 0.45rem;
+	justify-content: center;
+	padding: 0.58rem 1.2rem;
+	text-decoration: none;
+}
+
+.btn-outline-light {
+	border-color: rgba(255, 255, 255, 0.7);
+	color: #fff;
+}
+
+.contact-panel {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr 1fr;
+}
+
+.form {
+	background: #fff;
+	border: 1px solid var(--ciml-gray-100);
+	border-radius: var(--ciml-radius-xl);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+	padding: 1.6rem;
+}
+
+.form-row {
+	display: grid;
+	gap: 0.45rem;
+	margin-bottom: 0.95rem;
+}
+
+.form label {
+	color: var(--ciml-navy);
+	font-size: 0.86rem;
+	font-weight: 700;
+}
+
+.form input,
+.form select,
+.form textarea {
+	border: 1.5px solid var(--ciml-gray-200);
+	border-radius: 12px;
+	font: inherit;
+	padding: 0.78rem 0.9rem;
+	width: 100%;
+}
+
+.form textarea {
+	min-height: 130px;
+	resize: vertical;
+}
+
+.form button[disabled] {
+	cursor: not-allowed;
+	opacity: 0.72;
+}
+
+.legal-note {
+	background: #f8f7f4;
+	border-radius: 12px;
+	color: var(--ciml-gray-600);
+	font-size: 0.78rem;
+	line-height: 1.45;
+	margin-bottom: 1rem;
+	padding: 0.75rem;
+}
+
+.admin-preview {
+	background: #0b1727;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: var(--ciml-radius-xl);
+	box-shadow: var(--ciml-shadow-lg);
+	color: #dce6f2;
+	overflow: hidden;
+}
+
+.admin-top {
+	align-items: center;
+	background: #101f34;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 1.25rem;
+}
+
+.admin-body {
+	display: grid;
+	grid-template-columns: 230px 1fr;
+	min-height: 360px;
+}
+
+.admin-menu {
+	background: #0d1b2d;
+	border-right: 1px solid rgba(255, 255, 255, 0.08);
+	display: grid;
+	gap: 0.25rem;
+	padding: 0.8rem;
+}
+
+.admin-menu span,
+.admin-list div {
+	background: rgba(255, 255, 255, 0.04);
+	border-radius: 8px;
+	padding: 0.65rem 0.75rem;
+}
+
+.admin-content {
+	padding: 1.15rem;
+}
+
+.admin-grid,
+.roadmap {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.admin-box,
+.roadmap-step {
+	background: #fff;
+	border: 1px solid var(--ciml-gray-100);
+	border-radius: var(--ciml-radius-lg);
+	padding: 1rem;
+}
+
+.admin-box {
+	background: #13243a;
+	border-color: rgba(255, 255, 255, 0.08);
+}
+
+.admin-box span {
+	color: #8ea3b8;
+	display: block;
+	font-size: 0.78rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.admin-box strong {
+	color: #fff;
+	display: block;
+	font-size: 1.2rem;
+	margin-top: 0.25rem;
+}
+
+.admin-list {
+	display: grid;
+	gap: 0.65rem;
+	margin-top: 1rem;
+}
+
+.status {
+	background: var(--ciml-gold-pale);
+	border-radius: 999px;
+	color: #805c17;
+	display: inline-flex;
+	font-size: 0.72rem;
+	font-weight: 800;
+	padding: 0.22rem 0.58rem;
+}
+
+.roadmap {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.roadmap-step strong {
+	color: var(--ciml-navy);
+	display: block;
+	font-family: var(--ciml-head);
+	font-size: 1.15rem;
+}
+
+.roadmap-step span {
+	color: var(--ciml-gold);
+	display: block;
+	font-size: 0.76rem;
+	font-weight: 800;
+	letter-spacing: 0.06em;
+	margin-bottom: 0.35rem;
+	text-transform: uppercase;
+}
+
+.legal-grid {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(2, 1fr);
+}
+
 .fade-in {
 	opacity: 0;
 	transform: translateY(24px);
@@ -561,8 +800,13 @@ body {
 
 @media (max-width: 1100px) {
 	.info-grid,
+	.admin-body,
+	.admin-grid,
+	.contact-panel,
 	.grid-3,
 	.grid-4,
+	.legal-grid,
+	.roadmap,
 	.split,
 	.stats {
 		grid-template-columns: 1fr;
