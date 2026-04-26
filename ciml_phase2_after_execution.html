@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christus ist mein Leben — Phase 2 Live-Vorschau</title>
+<meta name="description" content="Phase-2-Live-Vorschau für das Gemeindeportal Christus ist mein Leben: Kleingruppen, Kurse, Mitarbeit, News, Zeugnisse und Anfragen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1A3A5C;--navy-dark:#0F2238;--navy-light:#2A5080;
+  --gold:#C8922A;--gold-light:#E0B050;--gold-pale:#F5E8CC;
+  --cream:#FBF8F2;--gray-50:#F8F7F4;--gray-100:#EEECE7;--gray-200:#D8D5CE;
+  --gray-400:#9D9890;--gray-600:#6B6760;--gray-800:#3A3832;--white:#fff;
+  --green:#2F7D55;--red:#A84848;--blue-soft:#EAF1F8;
+  --ff-head:'Cormorant Garamond',Georgia,serif;--ff-body:'Source Sans 3',system-ui,sans-serif;
+  --r-sm:6px;--r-md:10px;--r-lg:16px;--r-xl:22px;
+  --shadow-sm:0 1px 4px rgba(0,0,0,.07);--shadow-md:0 4px 16px rgba(0,0,0,.09);--shadow-lg:0 12px 40px rgba(0,0,0,.12);
+  --header-h:74px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--ff-body);color:var(--gray-800);background:var(--white);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit} img{display:block;max-width:100%;height:auto} ul{list-style:none}
+.container{max-width:1320px;margin:0 auto;padding:0 2rem}
+header{position:sticky;top:0;z-index:50;height:var(--header-h);background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-100)}
+.hdr{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.logo-wrap{display:flex;align-items:center;gap:.75rem;min-width:max-content}
+.logo-icon{width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:var(--ff-head);font-size:1.25rem}
+.logo-text strong{display:block;font-family:var(--ff-head);font-size:1.25rem;color:var(--navy);line-height:1.1}
+.logo-text span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--gray-400)}
+nav{display:flex;align-items:center;gap:.1rem}
+nav a{font-size:.86rem;font-weight:600;color:var(--gray-600);padding:.45rem .65rem;border-radius:var(--r-sm);white-space:nowrap}
+nav a:hover,nav a.active{color:var(--navy);background:var(--gray-50)}
+.hdr-cta{display:flex;gap:.65rem;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.58rem 1.25rem;border-radius:var(--r-md);border:2px solid transparent;font-size:.88rem;font-weight:700;cursor:pointer;transition:.22s;white-space:nowrap;font-family:var(--ff-body)}
+.btn-primary{background:var(--navy);border-color:var(--navy);color:white}.btn-primary:hover{background:var(--navy-light);border-color:var(--navy-light);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn-accent{background:var(--gold);border-color:var(--gold);color:white}.btn-accent:hover{background:#B07E20;border-color:#B07E20;transform:translateY(-1px)}
+.btn-outline{border-color:var(--navy);color:var(--navy);background:transparent}.btn-outline:hover{background:var(--navy);color:white}
+.btn-outline-light{border-color:rgba(255,255,255,.7);color:white;background:transparent}.btn-outline-light:hover{background:white;color:var(--navy)}
+.btn-sm{padding:.4rem .9rem;font-size:.8rem}.btn-lg{padding:.78rem 1.8rem;font-size:1rem}
+.badge{display:inline-flex;align-items:center;gap:.35rem;padding:.28rem .7rem;border-radius:999px;font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.badge-demo{background:var(--gold-pale);color:#8B5E10}.badge-green{background:#E5F3EC;color:var(--green)}.badge-blue{background:var(--blue-soft);color:var(--navy)}
+.hero{position:relative;min-height:82vh;background:var(--navy-dark);overflow:hidden;display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background:
+linear-gradient(110deg,rgba(10,22,40,.88) 0%,rgba(10,22,40,.62) 55%,rgba(10,22,40,.2) 100%),
+url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=85') center/cover no-repeat}
+.hero-content{position:relative;z-index:1;padding:5.5rem 0;color:white}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);gap:3rem;align-items:center}
+.hero-label{display:inline-flex;align-items:center;gap:.6rem;color:var(--gold-light);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:1.2rem}
+.hero-label::before{content:"";width:30px;height:2px;background:var(--gold)}
+.hero h1{font-family:var(--ff-head);font-size:clamp(2.7rem,5vw,4.8rem);line-height:1.08;margin-bottom:1.2rem;max-width:760px}
+.hero p{font-size:1.15rem;line-height:1.72;color:rgba(255,255,255,.86);max-width:62ch;margin-bottom:2rem}
+.hero-panel{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--r-xl);padding:1.5rem;backdrop-filter:blur(8px)}
+.hero-panel h3{font-family:var(--ff-head);font-size:1.55rem;margin-bottom:.9rem;color:white}
+.status-row{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.13);font-size:.94rem}
+.status-row:last-child{border-bottom:0}.status-row span:first-child{color:rgba(255,255,255,.65)}.status-row strong{color:white;text-align:right}
+.phase-strip{background:var(--navy);padding:1.1rem 0;color:white}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.strip-item{display:flex;gap:.75rem;align-items:center}.strip-dot{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:800}
+.strip-label{font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em}.strip-value{font-weight:800}
+.section{padding:clamp(3.5rem,7vw,6rem) 0}.section-alt{background:var(--cream)}.section-dark{background:var(--navy);color:white}
+.section-header{text-align:center;margin-bottom:3rem}.section-label{display:block;color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:var(--ff-head);font-size:clamp(2rem,4vw,3.2rem);line-height:1.14;color:var(--navy);margin-bottom:.9rem}.section-dark .section-title{color:white}
+.section-subtitle{font-size:1.06rem;line-height:1.7;color:var(--gray-600);max-width:68ch;margin:0 auto}.section-dark .section-subtitle{color:rgba(255,255,255,.72)}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem}
+.card{background:white;border:1px solid var(--gray-100);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-sm);transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gray-200)}
+.card-img{height:190px;background:var(--blue-soft);position:relative;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;transition:.55s}.card:hover .card-img img{transform:scale(1.04)}
+.card-body{padding:1.45rem;display:flex;flex-direction:column;flex:1}.card-meta{display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:.85rem}
+.card-title{font-family:var(--ff-head);font-size:1.38rem;line-height:1.22;color:var(--gray-800);margin-bottom:.55rem;font-weight:700}
+.card-text{font-size:.94rem;line-height:1.65;color:var(--gray-600);margin-bottom:1.1rem;flex:1}
+.meta-list{display:flex;flex-direction:column;gap:.45rem;margin:1rem 0}.meta-list li{display:flex;justify-content:space-between;gap:1rem;padding:.42rem 0;border-bottom:1px solid var(--gray-100);font-size:.9rem}.meta-list li span:first-child{color:var(--gray-400)}.meta-list li strong{text-align:right;color:var(--gray-800)}
+.filter-bar{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:1.5rem;justify-content:center}.filter-pill{border:1px solid var(--gray-200);background:white;color:var(--gray-600);border-radius:999px;padding:.45rem .9rem;font-size:.86rem;font-weight:700}.filter-pill.active{background:var(--navy);border-color:var(--navy);color:white}
+.form-panel{background:white;border-radius:var(--r-xl);border:1px solid var(--gray-100);box-shadow:var(--shadow-md);padding:1.6rem}
+.form-panel h3{font-family:var(--ff-head);font-size:1.65rem;color:var(--navy);margin-bottom:.6rem}.form-panel p{color:var(--gray-600);line-height:1.6;margin-bottom:1.2rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}.field{display:flex;flex-direction:column;gap:.32rem}.field.full{grid-column:1/-1}
+label{font-size:.82rem;font-weight:800;color:var(--gray-600)}input,select,textarea{width:100%;border:1.5px solid var(--gray-200);border-radius:var(--r-md);padding:.7rem .85rem;font-family:var(--ff-body);font-size:.95rem;outline:none;background:white}textarea{min-height:96px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--navy)}
+.note{font-size:.82rem;color:var(--gray-400);line-height:1.45;margin-top:.8rem}.warning{background:#FFF7E6;border:1px solid #F0D59E;border-radius:var(--r-lg);padding:1rem;color:#795113;line-height:1.55}
+.admin-board{background:#0D1F35;color:white;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-lg)}
+.admin-head{padding:1.4rem 1.6rem;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:1rem;align-items:center}.admin-head h3{font-family:var(--ff-head);font-size:1.7rem}.admin-body{display:grid;grid-template-columns:260px 1fr}
+.admin-nav{background:rgba(255,255,255,.04);padding:1rem}.admin-nav a{display:block;padding:.72rem .85rem;border-radius:var(--r-sm);color:rgba(255,255,255,.66);font-weight:700;font-size:.9rem}.admin-nav a.active,.admin-nav a:hover{background:rgba(255,255,255,.1);color:white}
+.admin-main{padding:1.4rem}.admin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.admin-tile{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:1rem}.admin-tile .num{font-family:var(--ff-head);font-size:2rem;color:var(--gold-light);font-weight:700}.admin-tile .txt{font-size:.85rem;color:rgba(255,255,255,.62)}
+.table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.9rem}.table th,.table td{padding:.72rem;border-bottom:1px solid rgba(255,255,255,.1);text-align:left}.table th{color:rgba(255,255,255,.55);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}.table td{color:rgba(255,255,255,.86)}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.step{background:white;border:1px solid var(--gray-100);border-radius:var(--r-lg);padding:1.2rem}.step-num{width:34px;height:34px;border-radius:50%;background:var(--gold-pale);color:#8B5E10;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:.8rem}.step h4{font-size:1.05rem;color:var(--navy);margin-bottom:.4rem}.step p{font-size:.9rem;line-height:1.55;color:var(--gray-600)}
+footer{background:#0D1F35;color:rgba(255,255,255,.62);padding:3rem 0 1.5rem}.ftr{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:2.5rem;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:2.2rem}footer strong{display:block;font-family:var(--ff-head);font-size:1.35rem;color:white;margin-bottom:.8rem}footer h4{color:white;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}footer a{display:block;margin-bottom:.5rem;color:rgba(255,255,255,.5)}.ftr-bottom{padding-top:1.2rem;font-size:.82rem;color:rgba(255,255,255,.35)}
+@media(max-width:1080px){nav{display:none}.hero-grid,.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,1fr)}.grid-4,.strip-grid,.timeline{grid-template-columns:repeat(2,1fr)}.admin-body{grid-template-columns:1fr}.admin-nav{display:grid;grid-template-columns:repeat(2,1fr);gap:.3rem}.ftr{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.container{padding:0 1rem}.hdr-cta .btn-primary{display:none}.hero{min-height:76vh}.grid-3,.grid-4,.strip-grid,.timeline,.form-grid,.admin-grid,.ftr{grid-template-columns:1fr}.card-img{height:170px}.admin-head{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container hdr">
+    <a class="logo-wrap" href="#top">
+      <div class="logo-icon">✝</div>
+      <div class="logo-text">
+        <strong>Christus ist mein Leben</strong>
+        <span>Phase 2 · Gemeindeleben</span>
+      </div>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#kleingruppen" class="active">Kleingruppen</a>
+      <a href="#kurse">Kurse</a>
+      <a href="#mitarbeit">Mitarbeit</a>
+      <a href="#news">News</a>
+      <a href="#zeugnisse">Zeugnisse</a>
+      <a href="#admin">Admin</a>
+    </nav>
+    <div class="hdr-cta">
+      <a href="#anfragen" class="btn btn-outline btn-sm">Anfragen</a>
+      <a href="#kurse" class="btn btn-primary btn-sm">Nächster Schritt</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-label">Phase 2 nach Ausführung</span>
+        <h1>Menschen verbinden. Gemeindeleben sichtbar machen.</h1>
+        <p>Diese Live-Vorschau zeigt Phase 2 nach der fachlichen Ausführung: Kleingruppen, Kurse, Mitarbeit, Event-Anmeldungen, News, Zeugnisse und einfache Gebetsanliegen — mit Demo-Daten und klarer Grenze zu sensiblen Phase-3-Modulen.</p>
+        <div class="btn-row">
+          <a class="btn btn-accent btn-lg" href="#kleingruppen">Kleingruppe finden</a>
+          <a class="btn btn-outline-light btn-lg" href="#admin">Admin-Struktur prüfen</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <h3>Phase-2-Status</h3>
+        <div class="status-row"><span>Status</span><strong>Ausführung geplant</strong></div>
+        <div class="status-row"><span>Datenmodell</span><strong>definiert</strong></div>
+        <div class="status-row"><span>Demo-Daten</span><strong>aktiv in Vorschau</strong></div>
+        <div class="status-row"><span>Sensible Module</span><strong>nicht aktiv</strong></div>
+        <div class="status-row"><span>Nächster Gate</span><strong>Phase-2 QA</strong></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="phase-strip">
+  <div class="container strip-grid">
+    <div class="strip-item"><div class="strip-dot">4</div><div><div class="strip-label">Kleingruppen</div><div class="strip-value">mit Filter</div></div></div>
+    <div class="strip-item"><div class="strip-dot">4</div><div><div class="strip-label">Kurse</div><div class="strip-value">mit Anmeldung</div></div></div>
+    <div class="strip-item"><div class="strip-dot">6</div><div><div class="strip-label">Mitarbeit</div><div class="strip-value">Bereiche</div></div></div>
+    <div class="strip-item"><div class="strip-dot">3</div><div><div class="strip-label">Zeugnisse</div><div class="strip-value">freigegeben</div></div></div>
+  </div>
+</div>
+
+<section class="section" id="kleingruppen">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">M14 · Kleingruppen</span>
+      <h2 class="section-title">Kleingruppen finden</h2>
+      <p class="section-subtitle">Menschen sollen nicht nur sonntags Besucher bleiben. Phase 2 führt sie in echte Gemeinschaft: nach Stadtteil, Sprache, Wochentag und Lebensphase.</p>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-pill active">Alle</button><button class="filter-pill">Deutsch</button><button class="filter-pill">Deutsch/Russisch</button><button class="filter-pill">Familien</button><button class="filter-pill">Junge Erwachsene</button><button class="filter-pill">Online</button>
+    </div>
+    <div class="grid-4">
+      <article class="card">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=700&q=80" alt=""></div>
+        <div class="card-body">
+          <div class="card-meta"><span class="badge badge-green">offen</span><span class="badge badge-demo">Demo</span></div>
+          <h3 class="card-title">Kleingruppe Stuttgart-Mitte</h3>
+          <p class="card-text">Gemeinschaft, Bibelgespräch und Gebet mitten in Stuttgart.</p>
+          <ul class="meta-list">
+            <li><span>Leitung</span><strong>Markus & Julia Weber</strong></li>
+            <li><span>Zeit</span><strong>Mi · 19:30</strong></li>
+            <li><span>Sprache</span><strong>Deutsch</strong></li>
+            <li><span>Plätze</span><strong>8 / 12</strong></li>
+          </ul>
+          <a href="#anfragen" class="btn btn-primary btn-sm">Gruppe anfragen</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80" alt=""></div>
+        <div class="card-body">
+          <div class="card-meta"><span class="badge badge-blue">Anfrage</span><span class="badge badge-demo">Demo</span></div>
+          <h3 class="card-title">Kleingruppe Bad Cannstatt</h3>
+          <p class="card-text">Hauskreis für Familien mit Austausch über Glauben im Alltag.</p>
+          <ul class="meta-list">
+            <li><span>Leitung</span><strong>Elena & Sergej Fischer</strong></li>
+            <li><span>Zeit</span><strong>Do · 19:00</strong></li>
+            <li><span>Sprache</span><strong>DE/RU</strong></li>
+            <li><span>Plätze</span><strong>13 / 14</strong></li>
+          </ul>
+          <a href="#anfragen" class="btn btn-primary btn-sm">Gruppe anfragen</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=700&q=80" alt=""></div>
+        <div class="card-body">
+          <div class="card-meta"><span class="badge badge-green">offen</span><span class="badge badge-demo">Demo</span></div>
+          <h3 class="card-title">Junge Erwachsene</h3>
+          <p class="card-text">Für junge Erwachsene, die Glauben praktisch leben wollen.</p>
+          <ul class="meta-list">
+            <li><span>Leitung</span><strong>David Klein</strong></li>
+            <li><span>Zeit</span><strong>Fr · 20:00</strong></li>
+            <li><span>Sprache</span><strong>Deutsch</strong></li>
+            <li><span>Plätze</span><strong>11 / 18</strong></li>
+          </ul>
+          <a href="#anfragen" class="btn btn-primary btn-sm">Gruppe anfragen</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=700&q=80" alt=""></div>
+        <div class="card-body">
+          <div class="card-meta"><span class="badge badge-blue">online</span><span class="badge badge-demo">Demo</span></div>
+          <h3 class="card-title">Gebetsgruppe Online</h3>
+          <p class="card-text">Online-Gebetsgruppe für Gemeinde, Familien und Stadt.</p>
+          <ul class="meta-list">
+            <li><span>Leitung</span><strong>Anna Schneider</strong></li>
+            <li><span>Zeit</span><strong>Di · 20:00</strong></li>
+            <li><span>Sprache</span><strong>DE/RU</strong></li>
+            <li><span>Plätze</span><strong>16 / 25</strong></li>
+          </ul>
+          <a href="#anfragen" class="btn btn-primary btn-sm">Gruppe anfragen</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="kurse">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">M15 · Kurse / Nächste Schritte</span>
+      <h2 class="section-title">Nächste Schritte im Glauben</h2>
+      <p class="section-subtitle">Phase 2 macht aus Interesse konkrete Schritte: Glauben kennenlernen, Taufe vorbereiten, Mitgliedschaft verstehen und Mitarbeit verantwortungsvoll beginnen.</p>
+    </div>
+    <div class="grid-4">
+      <article class="card"><div class="card-body"><div class="card-meta"><span class="badge badge-green">Anmeldung offen</span></div><h3 class="card-title">Glaubensgrundkurs</h3><p class="card-text">Für alle, die die Grundlagen des christlichen Glaubens verstehen möchten.</p><ul class="meta-list"><li><span>Start</span><strong>12.05.2026</strong></li><li><span>Dauer</span><strong>6 Abende</strong></li><li><span>Leitung</span><strong>Pastor Daniel</strong></li><li><span>Plätze</span><strong>20</strong></li></ul><a class="btn btn-primary btn-sm" href="#anfragen">Zum Kurs anmelden</a></div></article>
+      <article class="card"><div class="card-body"><div class="card-meta"><span class="badge badge-green">Anmeldung offen</span></div><h3 class="card-title">Taufkurs</h3><p class="card-text">Vorbereitung auf Taufe, Bekenntnis und neues Leben mit Christus.</p><ul class="meta-list"><li><span>Start</span><strong>23.05.2026</strong></li><li><span>Dauer</span><strong>3 Termine</strong></li><li><span>Leitung</span><strong>Maria Hoffmann</strong></li><li><span>Plätze</span><strong>12</strong></li></ul><a class="btn btn-primary btn-sm" href="#anfragen">Zum Kurs anmelden</a></div></article>
+      <article class="card"><div class="card-body"><div class="card-meta"><span class="badge badge-green">Anmeldung offen</span></div><h3 class="card-title">Mitgliedschaftskurs</h3><p class="card-text">Wie Gemeinde funktioniert, wofür wir stehen und wie man Teil wird.</p><ul class="meta-list"><li><span>Start</span><strong>06.06.2026</strong></li><li><span>Dauer</span><strong>2 Samstage</strong></li><li><span>Leitung</span><strong>Viktor Neumann</strong></li><li><span>Plätze</span><strong>16</strong></li></ul><a class="btn btn-primary btn-sm" href="#anfragen">Zum Kurs anmelden</a></div></article>
+      <article class="card"><div class="card-body"><div class="card-meta"><span class="badge badge-green">Anmeldung offen</span></div><h3 class="card-title">Mitarbeiterschulung</h3><p class="card-text">Grundlagen für Dienst, Verantwortung und geistliche Reife.</p><ul class="meta-list"><li><span>Start</span><strong>18.06.2026</strong></li><li><span>Dauer</span><strong>4 Abende</strong></li><li><span>Leitung</span><strong>Markus Weber</strong></li><li><span>Plätze</span><strong>25</strong></li></ul><a class="btn btn-primary btn-sm" href="#anfragen">Zum Kurs anmelden</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mitarbeit">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">M16 · Mitarbeit / Dienen</span>
+      <h2 class="section-title">Mit deinen Gaben dienen</h2>
+      <p class="section-subtitle">Mitarbeit wird in Phase 2 nicht zufällig gesammelt, sondern strukturiert: Bereich, Voraussetzungen, Schulung, Kontaktperson und Status.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card"><div class="card-body"><span class="badge badge-blue">Kinderschutz nötig</span><h3 class="card-title">Kinderarbeit</h3><p class="card-text">Kinder während des Gottesdienstes begleiten, lehren und schützen.</p><a href="#anfragen" class="btn btn-outline btn-sm">Mitarbeit anfragen</a></div></article>
+      <article class="card"><div class="card-body"><span class="badge badge-blue">Schulung nötig</span><h3 class="card-title">Lobpreis</h3><p class="card-text">Musik, Gesang und geistliche Atmosphäre im Gottesdienst.</p><a href="#anfragen" class="btn btn-outline btn-sm">Mitarbeit anfragen</a></div></article>
+      <article class="card"><div class="card-body"><span class="badge badge-blue">Technik</span><h3 class="card-title">Medien & Technik</h3><p class="card-text">Ton, Beamer, Livestream, Kamera und technische Vorbereitung.</p><a href="#anfragen" class="btn btn-outline btn-sm">Mitarbeit anfragen</a></div></article>
+      <article class="card"><div class="card-body"><span class="badge badge-green">Einstieg leicht</span><h3 class="card-title">Empfang</h3><p class="card-text">Neue Besucher begrüßen und Orientierung geben.</p><a href="#anfragen" class="btn btn-outline btn-sm">Mitarbeit anfragen</a></div></article>
+      <article class="card"><div class="card-body"><span class="badge badge-green">Gastfreundschaft</span><h3 class="card-title">Café / Küche</h3><p class="card-text">Begegnung nach dem Gottesdienst praktisch möglich machen.</p><a href="#anfragen" class="btn btn-outline btn-sm">Mitarbeit anfragen</a></div></article>
+      <article class="card"><div class="card-body"><span class="badge badge-blue">Schulung nötig</span><h3 class="card-title">Diakonie</h3><p class="card-text">Praktische Hilfe für Menschen in Not und Besuchsdienst.</p><a href="#anfragen" class="btn btn-outline btn-sm">Mitarbeit anfragen</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="anfragen">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Phase-2-Formulare</span>
+      <h2 class="section-title">Anfragen und Anmeldungen</h2>
+      <p class="section-subtitle">Die Formulare sind in dieser HTML nur Vorschau. In WordPress müssen sie mit Nonce, Validierung, Sanitizing, Honeypot und Datenschutz-Checkbox gebaut werden.</p>
+    </div>
+    <div class="grid-2">
+      <div class="form-panel">
+        <h3>Kleingruppe / Kurs anfragen</h3>
+        <p>Demo-Formular für Kleingruppen- und Kursanfragen.</p>
+        <form onsubmit="return false">
+          <div class="form-grid">
+            <div class="field"><label>Vorname</label><input value="Sophie"></div>
+            <div class="field"><label>Nachname</label><input value="Keller"></div>
+            <div class="field"><label>E-Mail</label><input type="email" value="sophie.keller@example.test"></div>
+            <div class="field"><label>Bereich</label><select><option>Junge Erwachsene</option><option>Glaubensgrundkurs</option><option>Taufkurs</option></select></div>
+            <div class="field full"><label>Nachricht</label><textarea>Ich bin neu in Stuttgart und suche Anschluss an eine Kleingruppe.</textarea></div>
+            <div class="field full"><label><input type="checkbox" checked style="width:auto;margin-right:.35rem"> Datenschutz-Einwilligung liegt vor</label></div>
+            <div class="field full"><button class="btn btn-primary">Anfrage senden — Vorschau</button></div>
+          </div>
+        </form>
+        <p class="note">Statusziel: new → reviewed → assigned → contacted → completed</p>
+      </div>
+      <div class="form-panel">
+        <h3>Mitarbeit / Gebet</h3>
+        <p>Demo-Formular für Mitarbeit und einfache Gebetsanliegen. Keine Seelsorge-Fallverwaltung.</p>
+        <form onsubmit="return false">
+          <div class="form-grid">
+            <div class="field"><label>Vorname</label><input value="Leon"></div>
+            <div class="field"><label>E-Mail</label><input type="email" value="leon.maier@example.test"></div>
+            <div class="field"><label>Typ</label><select><option>Mitarbeit: Medien & Technik</option><option>Einfaches Gebetsanliegen</option><option>Zeugnis einreichen</option></select></div>
+            <div class="field"><label>Status</label><select><option>new</option><option>reviewed</option><option>redirect_to_care</option></select></div>
+            <div class="field full"><label>Nachricht</label><textarea>Ich möchte im Medien-Team mitarbeiten. Erfahrung mit Kamera und Ton vorhanden.</textarea></div>
+            <div class="field full"><label><input type="checkbox" checked style="width:auto;margin-right:.35rem"> Datenschutz-Einwilligung liegt vor</label></div>
+            <div class="field full"><button class="btn btn-accent">Einreichen — Vorschau</button></div>
+          </div>
+        </form>
+        <p class="note">Sensible Anliegen werden nicht öffentlich angezeigt und bei Bedarf in Phase 3 übergeben.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">M17 · News / Berichte</span>
+      <h2 class="section-title">Aus dem Gemeindeleben</h2>
+      <p class="section-subtitle">News machen sichtbar, was in der Gemeinde geschieht: Kurse, Jugend, Diakonie und Berichte.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=700&q=80" alt=""></div><div class="card-body"><div class="card-meta"><span class="badge badge-green">Kurse</span><span class="badge badge-demo">01.05.2026</span></div><h3 class="card-title">Neuer Glaubensgrundkurs startet im Mai</h3><p class="card-text">Ab Mai beginnt ein neuer Kurs für alle, die den christlichen Glauben besser verstehen möchten.</p><a class="btn btn-outline btn-sm">Weiterlesen</a></div></article>
+      <article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=700&q=80" alt=""></div><div class="card-body"><div class="card-meta"><span class="badge badge-blue">Jugend</span><span class="badge badge-demo">08.05.2026</span></div><h3 class="card-title">Jugendfreizeit 2026 in Vorbereitung</h3><p class="card-text">Das Jugendteam plant eine Freizeit mit Bibelarbeiten, Gemeinschaft, Sport und Gebetszeiten.</p><a class="btn btn-outline btn-sm">Weiterlesen</a></div></article>
+      <article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=700&q=80" alt=""></div><div class="card-body"><div class="card-meta"><span class="badge badge-green">Diakonie</span><span class="badge badge-demo">15.05.2026</span></div><h3 class="card-title">Diakonie-Team besucht Senioren</h3><p class="card-text">Unser Besuchsdienst möchte ältere Menschen regelmäßig ermutigen und praktisch unterstützen.</p><a class="btn btn-outline btn-sm">Weiterlesen</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="zeugnisse">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">M18 · Zeugnisse</span>
+      <h2 class="section-title">Lebensgeschichten mit Freigabe</h2>
+      <p class="section-subtitle">Zeugnisse dürfen erst nach Einwilligung und Freigabe veröffentlicht werden. Anonymisierung ist Teil des Modells.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card"><div class="card-body"><span class="badge badge-green">freigegeben</span><h3 class="card-title">Ich habe neu Hoffnung gefunden</h3><p class="card-text">Ich kam zum ersten Mal in die Gemeinde, ohne genau zu wissen, was ich suche. Durch Gemeinschaft und Predigt habe ich neu verstanden, dass Gott mich nicht vergessen hat.</p><strong>Michael, 34</strong></div></article>
+      <article class="card"><div class="card-body"><span class="badge badge-blue">anonymisiert</span><h3 class="card-title">Gemeinschaft hat mein Leben verändert</h3><p class="card-text">Nach einer schweren Zeit fand ich durch Gebet, Gespräche und Kleingruppe wieder Hoffnung und Stabilität.</p><strong>Anonym</strong></div></article>
+      <article class="card"><div class="card-body"><span class="badge badge-green">freigegeben</span><h3 class="card-title">Glaube im Alltag gelernt</h3><p class="card-text">In der Jugendgruppe habe ich gelernt, meinen Glauben nicht nur sonntags, sondern im Alltag zu leben.</p><strong>Lena, 19</strong></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="admin">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Rückseite · Admin-Vorschau</span>
+      <h2 class="section-title">Phase-2-Adminstruktur</h2>
+      <p class="section-subtitle">Der Besucher sieht fertige Bereiche. Der Admin sieht dieselben Inhalte als strukturierte Module, Anfragen, Status und Freigaben.</p>
+    </div>
+    <div class="admin-board">
+      <div class="admin-head">
+        <h3>CImL Portal · Phase 2</h3>
+        <span class="badge badge-demo">Admin-Vorschau · nicht funktional</span>
+      </div>
+      <div class="admin-body">
+        <div class="admin-nav">
+          <a class="active">Übersicht</a>
+          <a>Inhalte</a>
+          <a>Anfragen</a>
+          <a>Kleingruppen</a>
+          <a>Kurse</a>
+          <a>Mitarbeit</a>
+          <a>News</a>
+          <a>Zeugnisse</a>
+          <a>Gebetsanliegen einfach</a>
+          <a>Einstellungen</a>
+        </div>
+        <div class="admin-main">
+          <div class="admin-grid">
+            <div class="admin-tile"><div class="num">4</div><div class="txt">Kleingruppen veröffentlicht</div></div>
+            <div class="admin-tile"><div class="num">4</div><div class="txt">Kurse mit Anmeldung</div></div>
+            <div class="admin-tile"><div class="num">6</div><div class="txt">Mitarbeit-Bereiche</div></div>
+            <div class="admin-tile"><div class="num">5</div><div class="txt">Neue Beispiel-Anfragen</div></div>
+            <div class="admin-tile"><div class="num">3</div><div class="txt">News-Beiträge</div></div>
+            <div class="admin-tile"><div class="num">3</div><div class="txt">Zeugnisse freigegeben</div></div>
+          </div>
+          <table class="table">
+            <thead><tr><th>Anfrage</th><th>Typ</th><th>Status</th><th>Sichtbarkeit</th></tr></thead>
+            <tbody>
+              <tr><td>Sophie Keller</td><td>Kleingruppe Junge Erwachsene</td><td>new</td><td>intern</td></tr>
+              <tr><td>Nikolai Schmidt</td><td>Glaubensgrundkurs</td><td>confirmed</td><td>intern</td></tr>
+              <tr><td>Anna Bauer</td><td>Event-Anmeldung Gemeindefest</td><td>confirmed</td><td>intern</td></tr>
+              <tr><td>Leon Maier</td><td>Mitarbeit Medien & Technik</td><td>reviewed</td><td>intern</td></tr>
+              <tr><td>ohne Name</td><td>Einfaches Gebetsanliegen</td><td>new</td><td>nicht öffentlich</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Umsetzungsgate</span>
+      <h2 class="section-title">Was nach dieser Phase geprüft wird</h2>
+      <p class="section-subtitle">Phase 2 ist erst abnahmefähig, wenn Daten, Formulare, Rollen und Schutzregeln zusammen geprüft sind.</p>
+    </div>
+    <div class="timeline">
+      <div class="step"><div class="step-num">1</div><h4>Datenmodell</h4><p>CPTs, Formular-Entries, Status und Sichtbarkeit sind definiert.</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Frontend</h4><p>Besucher sieht Kleingruppen, Kurse, Mitarbeit, News und Zeugnisse.</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Admin</h4><p>Admin sieht Anfragen intern, kann Status setzen und Inhalte freigeben.</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Sicherheit</h4><p>Keine personenbezogenen Anfragen öffentlich. Keine Phase-3-Daten aktiv.</p></div>
+    </div>
+    <div style="margin-top:2rem" class="warning">
+      <strong>Grenze zu Phase 3:</strong> Seelsorge, vertrauliche Gebetsverwaltung, Mitgliederbereich, Dienstpläne und Kinderschutz-Meldungen sind hier bewusst nicht aktiviert. Diese Bereiche brauchen ein eigenes Sicherheitskonzept.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="ftr">
+      <div>
+        <strong>Christus ist mein Leben</strong>
+        <p>Phase-2-Live-Vorschau mit Demo-Daten. Diese Datei zeigt das Zielbild nach der Phase-2-Ausführung und ist noch keine produktive WordPress-Umsetzung.</p>
+      </div>
+      <div><h4>Phase 2</h4><a>Kleingruppen</a><a>Kurse</a><a>Mitarbeit</a><a>Anmeldungen</a></div>
+      <div><h4>Schutz</h4><a>Keine Seelsorge aktiv</a><a>Keine öffentlichen Anfragen</a><a>Demo-Daten markiert</a></div>
+      <div><h4>Demo-Kontakt</h4><p>Königstraße 45<br>70173 Stuttgart<br>kontakt@christus-ist-mein-leben.de</p></div>
+    </div>
+    <div class="ftr-bottom">© 2026 Christus ist mein Leben · Demo-Vorschau · Phase 2</div>
+  </div>
+</footer>
+<script>
+(function(){
+  document.querySelectorAll('.filter-pill').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.filter-pill').forEach(function(b){b.classList.remove('active')});
+      btn.classList.add('active');
+    });
+  });
+})();
+</script>
+</body>
+</html>

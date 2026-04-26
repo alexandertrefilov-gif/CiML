@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evangeliums Gemeinde Berlin — Christus ist unser Leben</title>
+<meta name="description" content="Willkommen in der Evangeliums Gemeinde Berlin. Entdecke Gottes Liebe, werde Teil unserer Gemeinschaft und lass dein Leben verwandeln.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:       #1A3A5C;
+  --navy-dark:  #0F2238;
+  --navy-light: #2A5080;
+  --gold:       #C8922A;
+  --gold-light: #E0B050;
+  --gold-pale:  #F5E8CC;
+  --cream:      #FBF8F2;
+  --gray-50:    #F8F7F4;
+  --gray-100:   #EEECE7;
+  --gray-200:   #D8D5CE;
+  --gray-400:   #9D9890;
+  --gray-600:   #6B6760;
+  --gray-800:   #3A3832;
+  --white:      #FFFFFF;
+  --ff-head:    'Cormorant Garamond', Georgia, serif;
+  --ff-body:    'Source Sans 3', system-ui, sans-serif;
+  --r-sm: 6px; --r-md: 10px; --r-lg: 16px; --r-xl: 22px;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.07);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.09);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+  --header-h: 70px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--ff-body); color: var(--gray-800); background: var(--white); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* SKIP LINK */
+.skip { position: absolute; left: -9999px; top: 4px; background: var(--gold); color: var(--white); padding: .5rem 1rem; border-radius: var(--r-sm); font-size: .85rem; z-index: 9999; }
+.skip:focus { left: 4px; }
+
+/* HEADER */
+header { position: sticky; top: 0; z-index: 900; background: rgba(255,255,255,.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--gray-100); height: var(--header-h); }
+.hdr { max-width: 1320px; margin: 0 auto; padding: 0 2rem; height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.logo-wrap { display: flex; align-items: center; gap: .75rem; }
+.logo-icon { width: 42px; height: 42px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.logo-icon svg { width: 22px; height: 22px; }
+.logo-text strong { display: block; font-family: var(--ff-head); font-size: 1.2rem; font-weight: 700; color: var(--navy); line-height: 1.1; }
+.logo-text span { font-size: .72rem; color: var(--gray-400); letter-spacing: .08em; text-transform: uppercase; }
+nav { display: flex; align-items: center; gap: .25rem; }
+nav a { font-size: .875rem; font-weight: 500; color: var(--gray-600); padding: .45rem .75rem; border-radius: var(--r-sm); transition: all .2s; white-space: nowrap; }
+nav a:hover, nav a.active { color: var(--navy); background: var(--gray-50); }
+.hdr-cta { display: flex; align-items: center; gap: .75rem; }
+.btn { display: inline-flex; align-items: center; gap: .4rem; padding: .55rem 1.25rem; border-radius: var(--r-md); font-size: .85rem; font-weight: 600; font-family: var(--ff-body); cursor: pointer; border: 2px solid transparent; transition: all .22s; white-space: nowrap; }
+.btn-primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
+.btn-primary:hover { background: var(--navy-light); border-color: var(--navy-light); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-accent { background: var(--gold); color: var(--white); border-color: var(--gold); }
+.btn-accent:hover { background: #B07E20; border-color: #B07E20; transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn-outline:hover { background: var(--navy); color: var(--white); }
+.btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.65); }
+.btn-outline-light:hover { background: var(--white); color: var(--navy); border-color: var(--white); }
+.btn-lg { padding: .75rem 2rem; font-size: 1rem; }
+.btn-sm { padding: .4rem 1rem; font-size: .8rem; }
+
+/* HERO */
+.hero { position: relative; min-height: 88vh; display: flex; align-items: center; overflow: hidden; background: var(--navy-dark); }
+.hero-bg { position: absolute; inset: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(10,22,40,.82) 0%, rgba(10,22,40,.55) 55%, rgba(10,22,40,.2) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 1320px; margin: 0 auto; padding: 5rem 2rem; }
+.hero-inner { max-width: 680px; }
+.hero-label { display: inline-flex; align-items: center; gap: .6rem; font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 1.25rem; }
+.hero-label::before { content: ''; width: 28px; height: 2px; background: var(--gold); }
+.hero h1 { font-family: var(--ff-head); font-size: clamp(2.6rem, 5.5vw, 4.5rem); font-weight: 700; color: var(--white); line-height: 1.12; letter-spacing: -.02em; margin-bottom: 1.25rem; }
+.hero p { font-size: clamp(1rem, 1.8vw, 1.2rem); color: rgba(255,255,255,.85); line-height: 1.75; margin-bottom: 2.25rem; max-width: 52ch; }
+.btn-row { display: flex; flex-wrap: wrap; gap: .875rem; align-items: center; }
+.hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: .5rem; color: rgba(255,255,255,.45); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; animation: bounce 2.2s ease-in-out infinite; }
+.hero-scroll svg { width: 20px; height: 20px; }
+@keyframes bounce { 0%,100%{transform: translateX(-50%) translateY(0)} 50%{transform: translateX(-50%) translateY(6px)} }
+
+/* SECTION WRAPPER */
+.section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.section-alt { background: var(--cream); }
+.section-dark { background: var(--navy); color: var(--white); }
+.container { max-width: 1320px; margin: 0 auto; padding: 0 2rem; }
+.section-header { text-align: center; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.section-label { font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: .875rem; display: block; }
+.section-title { font-family: var(--ff-head); font-size: clamp(1.9rem, 3.8vw, 3rem); font-weight: 700; color: var(--navy); line-height: 1.18; letter-spacing: -.01em; margin-bottom: 1rem; }
+.section-dark .section-title { color: var(--white); }
+.section-subtitle { font-size: 1.075rem; color: var(--gray-600); max-width: 58ch; margin: 0 auto; line-height: 1.7; }
+.section-dark .section-subtitle { color: rgba(255,255,255,.7); }
+
+/* GRID */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 1.75rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 1.5rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr)); gap: 2rem; }
+
+/* CARD */
+.card { background: var(--white); border-radius: var(--r-xl); border: 1px solid var(--gray-100); overflow: hidden; transition: all .28s; display: flex; flex-direction: column; }
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--gray-200); }
+.card-img { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+.card:hover .card-img img { transform: scale(1.04); }
+.card-badge { position: absolute; top: .875rem; left: .875rem; background: var(--gold); color: var(--white); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 99px; }
+.card-body { padding: 1.4rem 1.6rem; flex: 1; display: flex; flex-direction: column; }
+.card-meta { display: flex; align-items: center; gap: 1rem; font-size: .8rem; color: var(--gray-400); margin-bottom: .75rem; }
+.card-meta-item { display: flex; align-items: center; gap: .3rem; }
+.card-title { font-family: var(--ff-head); font-size: 1.25rem; font-weight: 700; color: var(--gray-800); line-height: 1.28; margin-bottom: .6rem; transition: color .18s; }
+.card:hover .card-title { color: var(--navy); }
+.card-excerpt { font-size: .9rem; color: var(--gray-600); line-height: 1.68; flex: 1; margin-bottom: 1rem; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--gray-100); margin-top: auto; }
+.tag { display: inline-flex; align-items: center; padding: .22rem .65rem; font-size: .75rem; font-weight: 500; border-radius: 99px; background: var(--gray-100); color: var(--gray-600); transition: all .18s; }
+.tag:hover { background: var(--navy); color: var(--white); }
+
+/* MINISTRY CARDS */
+.ministry-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 1.25rem; }
+.min-card { border-radius: var(--r-xl); overflow: hidden; position: relative; aspect-ratio: 3/4; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; transition: transform .28s; }
+.min-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.min-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .55s; }
+.min-card:hover img { transform: scale(1.06); }
+.min-card-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,22,40,.88) 0%, rgba(10,22,40,.3) 50%, rgba(10,22,40,0) 100%); }
+.min-card-body { position: relative; z-index: 2; padding: 1.25rem; }
+.min-card-icon { font-size: 1.6rem; margin-bottom: .5rem; }
+.min-card-title { font-family: var(--ff-head); font-size: 1.3rem; font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: .35rem; }
+.min-card-desc { font-size: .8rem; color: rgba(255,255,255,.7); line-height: 1.5; }
+
+/* SERVICES INFO BAR */
+.services-bar { background: var(--navy); padding: 1.25rem 0; }
+.sbar-inner { max-width: 1320px; margin: 0 auto; padding: 0 2rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; }
+.sbar-item { display: flex; align-items: center; gap: .75rem; }
+.sbar-icon { width: 40px; height: 40px; background: rgba(255,255,255,.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.sbar-icon svg { width: 18px; height: 18px; color: var(--gold); }
+.sbar-label { font-size: .78rem; color: rgba(255,255,255,.5); letter-spacing: .04em; text-transform: uppercase; margin-bottom: .15rem; }
+.sbar-value { font-size: .95rem; font-weight: 600; color: var(--white); }
+
+/* CTA SECTION */
+.cta-section { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%); padding: clamp(3rem, 6vw, 5rem) 0; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; top: -120px; right: -120px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(200,146,42,.18) 0%, transparent 70%); pointer-events: none; }
+.cta-section::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(200,146,42,.12) 0%, transparent 70%); pointer-events: none; }
+.cta-inner { position: relative; z-index: 1; }
+.cta-title { font-family: var(--ff-head); font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 700; color: var(--white); margin-bottom: 1rem; line-height: 1.18; }
+.cta-text { font-size: 1.075rem; color: rgba(255,255,255,.78); max-width: 55ch; margin: 0 auto 2.25rem; line-height: 1.72; }
+
+/* SERMON MEDIA CARD */
+.media-card { background: var(--white); border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--gray-100); transition: all .28s; display: flex; flex-direction: column; }
+.media-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.media-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--navy); }
+.media-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; opacity: .85; }
+.media-card:hover .media-thumb img { transform: scale(1.04); opacity: 1; }
+.play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.play-btn span { width: 52px; height: 52px; background: rgba(255,255,255,.92); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform .22s, background .22s; }
+.media-card:hover .play-btn span { transform: scale(1.1); background: var(--white); }
+.play-btn svg { width: 20px; height: 20px; color: var(--navy); margin-left: 3px; }
+.media-type-badge { position: absolute; top: .75rem; right: .75rem; background: var(--gold); color: var(--white); font-size: .7rem; font-weight: 700; padding: .25rem .7rem; border-radius: 99px; letter-spacing: .05em; }
+.media-body { padding: 1.25rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.media-meta { display: flex; gap: .75rem; align-items: center; font-size: .78rem; color: var(--gray-400); margin-bottom: .6rem; flex-wrap: wrap; }
+.media-title { font-family: var(--ff-head); font-size: 1.2rem; font-weight: 700; color: var(--gray-800); line-height: 1.3; margin-bottom: .5rem; flex: 1; }
+.scripture { font-size: .85rem; font-weight: 600; color: var(--gold); margin-bottom: .875rem; }
+
+/* TESTIMONIALS */
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1.5rem; }
+.testi-card { background: var(--white); border: 1px solid var(--gray-100); border-radius: var(--r-xl); padding: 2rem; position: relative; }
+.testi-card::before { content: '\201C'; font-family: var(--ff-head); font-size: 5rem; color: var(--gold); opacity: .25; position: absolute; top: .75rem; left: 1.25rem; line-height: 1; }
+.testi-text { font-size: 1rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 1.5rem; padding-top: 1.5rem; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: .875rem; }
+.testi-avatar { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--gray-100); }
+.testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testi-name { font-weight: 600; font-size: .9rem; color: var(--gray-800); }
+.testi-role { font-size: .8rem; color: var(--gray-400); }
+
+/* DONATE SECTION */
+.donate-section { background: linear-gradient(135deg, #8B5E10 0%, var(--gold) 100%); padding: clamp(3rem, 6vw, 5rem) 0; }
+.donate-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.donate-text .section-label { color: rgba(255,255,255,.7); }
+.donate-title { font-family: var(--ff-head); font-size: clamp(1.9rem, 3.5vw, 2.75rem); font-weight: 700; color: var(--white); margin-bottom: 1rem; line-height: 1.2; }
+.donate-desc { color: rgba(255,255,255,.88); line-height: 1.75; font-size: 1.05rem; margin-bottom: 2rem; }
+.donate-box { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: var(--r-xl); padding: 2.5rem; text-align: center; backdrop-filter: blur(4px); }
+.donate-box h3 { font-family: var(--ff-head); font-size: 1.6rem; font-weight: 700; color: var(--white); margin-bottom: .75rem; }
+.donate-box p { color: rgba(255,255,255,.8); font-size: .9rem; margin-bottom: 1.75rem; line-height: 1.6; }
+
+/* NEWSLETTER */
+.newsletter-section { background: var(--gray-50); padding: clamp(2.5rem, 5vw, 4rem) 0; }
+.newsletter-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+.newsletter-inner h2 { font-family: var(--ff-head); font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 700; color: var(--navy); margin-bottom: .75rem; }
+.newsletter-inner p { color: var(--gray-600); margin-bottom: 1.75rem; font-size: .95rem; }
+.nl-form { display: flex; gap: .75rem; max-width: 480px; margin: 0 auto; }
+.nl-form input { flex: 1; padding: .72rem 1.1rem; border: 1.5px solid var(--gray-200); border-radius: var(--r-md); font-size: .9rem; font-family: var(--ff-body); transition: border-color .2s; outline: none; }
+.nl-form input:focus { border-color: var(--navy); }
+.nl-note { font-size: .78rem; color: var(--gray-400); margin-top: .75rem; }
+
+/* TEAM CARD */
+.team-card { text-align: center; }
+.team-photo { aspect-ratio: 1; border-radius: var(--r-xl); overflow: hidden; margin-bottom: 1rem; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .5s; }
+.team-card:hover .team-photo img { transform: scale(1.04); }
+.team-name { font-family: var(--ff-head); font-size: 1.2rem; font-weight: 700; color: var(--gray-800); margin-bottom: .25rem; }
+.team-role { font-size: .85rem; font-weight: 600; color: var(--gold); margin-bottom: .6rem; }
+.team-bio { font-size: .85rem; color: var(--gray-600); line-height: 1.6; }
+
+/* ABOUT SPLIT */
+.about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-img-wrap { position: relative; }
+.about-img-main { border-radius: var(--r-xl); overflow: hidden; aspect-ratio: 4/5; }
+.about-img-main img { width: 100%; height: 100%; object-fit: cover; }
+.about-img-accent { position: absolute; bottom: -2rem; right: -2rem; width: 55%; border-radius: var(--r-lg); overflow: hidden; border: 5px solid var(--white); box-shadow: var(--shadow-lg); aspect-ratio: 4/3; }
+.about-img-accent img { width: 100%; height: 100%; object-fit: cover; }
+.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2.5rem; }
+.stat-box { background: var(--cream); border-radius: var(--r-lg); padding: 1.25rem; }
+.stat-num { font-family: var(--ff-head); font-size: 2.2rem; font-weight: 700; color: var(--navy); line-height: 1; }
+.stat-label { font-size: .82rem; color: var(--gray-600); margin-top: .3rem; }
+.about-text h2 { font-family: var(--ff-head); font-size: clamp(1.9rem, 3.5vw, 2.75rem); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem; }
+.about-text p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 1.1rem; }
+.about-text .btn { margin-top: 1rem; }
+.check-list { margin: 1.5rem 0; display: flex; flex-direction: column; gap: .65rem; }
+.check-item { display: flex; align-items: center; gap: .75rem; font-size: .95rem; color: var(--gray-700); }
+.check-icon { width: 22px; height: 22px; background: var(--gold-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.check-icon svg { width: 12px; height: 12px; color: var(--gold); }
+
+/* EVENTS TABLE */
+.event-list { display: flex; flex-direction: column; gap: 1rem; }
+.event-item { background: var(--white); border: 1px solid var(--gray-100); border-radius: var(--r-lg); padding: 1.25rem 1.5rem; display: flex; gap: 1.5rem; align-items: center; transition: all .22s; }
+.event-item:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); transform: translateX(4px); }
+.event-date { text-align: center; min-width: 56px; }
+.event-day { font-family: var(--ff-head); font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1; }
+.event-month { font-size: .73rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.event-divider { width: 1px; background: var(--gray-100); align-self: stretch; }
+.event-info { flex: 1; }
+.event-name { font-family: var(--ff-head); font-size: 1.15rem; font-weight: 700; color: var(--gray-800); margin-bottom: .3rem; }
+.event-details { display: flex; flex-wrap: wrap; gap: .75rem; font-size: .82rem; color: var(--gray-400); }
+.event-detail { display: flex; align-items: center; gap: .3rem; }
+
+/* FOOTER */
+footer { background: #0D1F35; color: var(--gray-200); padding: 4rem 0 0; }
+.ftr-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+.ftr-brand strong { display: block; font-family: var(--ff-head); font-size: 1.35rem; font-weight: 700; color: var(--white); margin-bottom: .75rem; }
+.ftr-brand p { font-size: .875rem; color: rgba(255,255,255,.5); line-height: 1.75; margin-bottom: 1.5rem; }
+.social-row { display: flex; gap: .65rem; }
+.social-btn { width: 36px; height: 36px; background: rgba(255,255,255,.07); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.5); font-size: .75rem; font-weight: 700; transition: all .2s; }
+.social-btn:hover { background: var(--gold); color: var(--white); }
+.ftr-col h4 { font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--white); margin-bottom: 1.1rem; }
+.ftr-nav { display: flex; flex-direction: column; gap: .55rem; }
+.ftr-nav a { font-size: .875rem; color: rgba(255,255,255,.45); transition: color .18s; }
+.ftr-nav a:hover { color: var(--white); }
+.ftr-contact-item { display: flex; gap: .65rem; margin-bottom: .75rem; font-size: .875rem; color: rgba(255,255,255,.5); }
+.ftr-contact-item svg { width: 15px; height: 15px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.ftr-bottom { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 0; font-size: .82rem; color: rgba(255,255,255,.3); flex-wrap: wrap; gap: 1rem; }
+.ftr-bottom a { color: rgba(255,255,255,.3); transition: color .18s; }
+.ftr-bottom a:hover { color: rgba(255,255,255,.7); }
+.ftr-legal { display: flex; gap: 1.5rem; }
+
+/* RESPONSIVE */
+@media(max-width: 1024px) {
+  .about-split { grid-template-columns: 1fr; gap: 3rem; }
+  .about-img-accent { display: none; }
+  .donate-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .ftr-grid { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width: 768px) {
+  nav { display: none; }
+  .hdr-cta .btn-primary { display: none; }
+  .hero { min-height: 80vh; }
+  .nl-form { flex-direction: column; }
+  .ftr-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .ftr-bottom { flex-direction: column; text-align: center; }
+}
+@media(max-width: 640px) {
+  .event-item { flex-direction: column; align-items: flex-start; }
+  .event-divider { width: 100%; height: 1px; }
+}
+
+/* ANIMATIONS */
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+.fade-in.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="hdr">
+    <a class="logo-wrap" href="#">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+          <path d="M12 2L12 8M8 5L16 5M6 9h12l1 12H5L6 9z"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <strong>Evangeliums Gemeinde</strong>
+        <span>Berlin · Mitte</span>
+      </div>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#gottesdienst" class="active">Gottesdienst</a>
+      <a href="#gemeinde">Gemeinde</a>
+      <a href="#dienste">Dienste</a>
+      <a href="#medien">Medien</a>
+      <a href="#veranstaltungen">Events</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="hdr-cta">
+      <a href="#spenden" class="btn btn-accent btn-sm">Spenden</a>
+      <a href="#verbinden" class="btn btn-primary btn-sm">Dazugehören</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="main" aria-label="Willkommen">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&q=85" alt="">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-inner">
+      <p class="hero-label">Evangeliums Gemeinde Berlin</p>
+      <h1>Hier beginnt dein&nbsp;neues Leben</h1>
+      <p>Du bist willkommen — so wie du bist. Entdecke eine lebendige Gemeinschaft, die auf Jesus Christus gegründet ist, und erlebe, wie Gottes Liebe dein Leben verändert.</p>
+      <div class="btn-row">
+        <a href="#gottesdienst" class="btn btn-accent btn-lg">Gottesdienst besuchen</a>
+        <a href="#medien" class="btn btn-outline-light btn-lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Predigt ansehen
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Entdecken</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- ═══ SERVICES BAR ═══ -->
+<div class="services-bar" id="gottesdienst">
+  <div class="sbar-inner">
+    <div class="sbar-item">
+      <div class="sbar-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div>
+        <div class="sbar-label">Gottesdienst</div>
+        <div class="sbar-value">Sonntag · 10:00 &amp; 17:00 Uhr</div>
+      </div>
+    </div>
+    <div class="sbar-item">
+      <div class="sbar-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <div class="sbar-label">Adresse</div>
+        <div class="sbar-value">Auguststraße 87 · 10117 Berlin</div>
+      </div>
+    </div>
+    <div class="sbar-item">
+      <div class="sbar-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div>
+        <div class="sbar-label">Online Stream</div>
+        <div class="sbar-value">YouTube · Facebook Live</div>
+      </div>
+    </div>
+    <div class="sbar-item">
+      <div class="sbar-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div>
+        <div class="sbar-label">Gemeinschaft</div>
+        <div class="sbar-value">Mittwoch · 19:00 Uhr</div>
+      </div>
+    </div>
+    <div>
+      <a href="#verbinden" class="btn btn-accent btn-sm">Erstbesucher-Info</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ÜBER UNS ═══ -->
+<section class="section" id="gemeinde">
+  <div class="container">
+    <div class="about-split">
+      <div class="about-img-wrap fade-in">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1544365558-35aa4afcf11f?w=800&q=80" alt="Gemeinde im Gottesdienst" loading="lazy">
+        </div>
+        <div class="about-img-accent">
+          <img src="https://images.unsplash.com/photo-1609234656388-0ff363383899?w=600&q=80" alt="Anbetung" loading="lazy">
+        </div>
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-num">1.200+</div>
+            <div class="stat-label">Gemeindemitglieder</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">35</div>
+            <div class="stat-label">Kleingruppen</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">12</div>
+            <div class="stat-label">Dienste & Bereiche</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">18+</div>
+            <div class="stat-label">Jahre in Berlin</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text fade-in">
+        <span class="section-label">Wer wir sind</span>
+        <h2>Eine Gemeinschaft, die dein Leben verändert</h2>
+        <p>Die Evangeliums Gemeinde Berlin ist eine lebendige, interkulturelle Gemeinde im Herzen der Stadt. Wir glauben an die transformierende Kraft des Evangeliums Jesu Christi — für jeden Menschen, in jeder Lebenslage.</p>
+        <p>Seit über 18 Jahren wachsen wir als Familie zusammen: in Anbetung, Gebet, Bibelstudium und praktischer Nächstenliebe. Ob du zum ersten Mal in einer Gemeinde bist oder tief verwurzelt im Glauben lebst — hier ist Platz für dich.</p>
+        <ul class="check-list">
+          <li class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Bibelbasierte, relevante Predigten
+          </li>
+          <li class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Lebendige Anbetung und Gebet
+          </li>
+          <li class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Seelsorge und pastorale Begleitung
+          </li>
+          <li class="check-item">
+            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Programme für alle Generationen
+          </li>
+        </ul>
+        <a href="#verbinden" class="btn btn-primary">Mehr über uns</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DIENSTE / MINISTERIEN ═══ -->
+<section class="section section-alt" id="dienste">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Gemeinschaft</span>
+      <h2 class="section-title">Dienste &amp; Bereiche</h2>
+      <p class="section-subtitle">Finde deinen Platz. Für jede Lebensphase gibt es bei uns einen Bereich, der zu dir passt.</p>
+    </div>
+    <div class="ministry-grid">
+      <div class="min-card fade-in">
+        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80" alt="Kinder" loading="lazy">
+        <div class="min-card-overlay"></div>
+        <div class="min-card-body">
+          <div class="min-card-icon">✝</div>
+          <div class="min-card-title">Kinder</div>
+          <div class="min-card-desc">Entdecke Gottes Welt — ab 3 Jahren</div>
+        </div>
+      </div>
+      <div class="min-card fade-in">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Jugend" loading="lazy">
+        <div class="min-card-overlay"></div>
+        <div class="min-card-body">
+          <div class="min-card-icon">✝</div>
+          <div class="min-card-title">Jugend</div>
+          <div class="min-card-desc">Glaube, Gemeinschaft, Identität</div>
+        </div>
+      </div>
+      <div class="min-card fade-in">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Frauen" loading="lazy">
+        <div class="min-card-overlay"></div>
+        <div class="min-card-body">
+          <div class="min-card-icon">✝</div>
+          <div class="min-card-title">Frauen</div>
+          <div class="min-card-desc">Stärke, Tiefe, Gemeinschaft</div>
+        </div>
+      </div>
+      <div class="min-card fade-in">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Männer" loading="lazy">
+        <div class="min-card-overlay"></div>
+        <div class="min-card-body">
+          <div class="min-card-icon">✝</div>
+          <div class="min-card-title">Männer</div>
+          <div class="min-card-desc">Charakter, Berufung, Verantwortung</div>
+        </div>
+      </div>
+      <div class="min-card fade-in">
+        <img src="https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=600&q=80" alt="Gebet" loading="lazy">
+        <div class="min-card-overlay"></div>
+        <div class="min-card-body">
+          <div class="min-card-icon">✝</div>
+          <div class="min-card-title">Gebet</div>
+          <div class="min-card-desc">Im Gebet verwandelt sich alles</div>
+        </div>
+      </div>
+      <div class="min-card fade-in">
+        <img src="https://images.unsplash.com/photo-1614854262318-831574f15f1f?w=600&q=80" alt="Online" loading="lazy">
+        <div class="min-card-overlay"></div>
+        <div class="min-card-body">
+          <div class="min-card-icon">✝</div>
+          <div class="min-card-title">Online</div>
+          <div class="min-card-desc">Gemeinde ohne Grenzen — weltweit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section" id="verbinden">
+  <div class="container cta-inner">
+    <span class="section-label" style="color:rgba(255,255,255,.55)">Nächster Schritt</span>
+    <h2 class="cta-title">Du gehörst dazu.<br>Komm einfach vorbei.</h2>
+    <p class="cta-text">Ob du Gott gerade neu entdeckst oder schon lange glaubst — wir laden dich herzlich ein. Beim Erstbesucher-Treffen lernst du unsere Pastoren und die Gemeinde kennen.</p>
+    <div class="btn-row" style="justify-content:center;gap:1rem">
+      <a href="#" class="btn btn-accent btn-lg">Erstbesucher-Treffen</a>
+      <a href="#" class="btn btn-outline-light btn-lg">Kontakt aufnehmen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MEDIEN / PREDIGTEN ═══ -->
+<section class="section section-alt" id="medien">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Mediathek</span>
+      <h2 class="section-title">Predigten &amp; Botschaften</h2>
+      <p class="section-subtitle">Lass dich tief bewegen. Predigten, Podcasts und Lehrseries — jederzeit, überall verfügbar.</p>
+    </div>
+    <div class="grid-3">
+      <div class="media-card fade-in">
+        <div class="media-thumb">
+          <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=700&q=80" alt="" loading="lazy">
+          <div class="play-btn"><span><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span></div>
+          <span class="media-type-badge">Predigt</span>
+        </div>
+        <div class="media-body">
+          <div class="media-meta"><span>Pastor Andreas Weber</span><span>·</span><span>52 Min</span></div>
+          <div class="media-title">Das Leben aus dem Überfluss — Johannes 10:10</div>
+          <div class="scripture">Johannes 10:10</div>
+          <div style="display:flex;gap:.6rem;margin-top:auto;">
+            <a href="#" class="btn btn-primary btn-sm">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Ansehen
+            </a>
+            <a href="#" class="btn btn-outline btn-sm">Notizen</a>
+          </div>
+        </div>
+      </div>
+      <div class="media-card fade-in">
+        <div class="media-thumb">
+          <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=700&q=80" alt="" loading="lazy">
+          <div class="play-btn"><span><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span></div>
+          <span class="media-type-badge">Serie</span>
+        </div>
+        <div class="media-body">
+          <div class="media-meta"><span>Pastorin Ruth Müller</span><span>·</span><span>48 Min</span></div>
+          <div class="media-title">Glaube, der Berge versetzt — Teil 3</div>
+          <div class="scripture">Markus 11:22–24</div>
+          <div style="display:flex;gap:.6rem;margin-top:auto;">
+            <a href="#" class="btn btn-primary btn-sm">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Ansehen
+            </a>
+            <a href="#" class="btn btn-outline btn-sm">Notizen</a>
+          </div>
+        </div>
+      </div>
+      <div class="media-card fade-in">
+        <div class="media-thumb">
+          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=700&q=80" alt="" loading="lazy">
+          <div class="play-btn"><span><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span></div>
+          <span class="media-type-badge">Podcast</span>
+        </div>
+        <div class="media-body">
+          <div class="media-meta"><span>Dr. Simon Kraft</span><span>·</span><span>37 Min</span></div>
+          <div class="media-title">Identität in Christus — Wer bin ich wirklich?</div>
+          <div class="scripture">Galater 2:20</div>
+          <div style="display:flex;gap:.6rem;margin-top:auto;">
+            <a href="#" class="btn btn-primary btn-sm">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Anhören
+            </a>
+            <a href="#" class="btn btn-outline btn-sm">Transkript</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="#" class="btn btn-outline">Gesamte Mediathek</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VERANSTALTUNGEN ═══ -->
+<section class="section" id="veranstaltungen">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start" class="events-layout">
+      <div class="fade-in">
+        <span class="section-label">Kalender</span>
+        <h2 class="section-title" style="text-align:left;margin-bottom:2rem">Nächste Veranstaltungen</h2>
+        <div class="event-list">
+          <div class="event-item">
+            <div class="event-date"><div class="event-day">08</div><div class="event-month">Jun</div></div>
+            <div class="event-divider"></div>
+            <div class="event-info">
+              <div class="event-name">Sommerfest der Gemeinde 2025</div>
+              <div class="event-details">
+                <span class="event-detail"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14:00 Uhr</span>
+                <span class="event-detail"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Gemeindegarten</span>
+                <span class="tag">Kostenlos</span>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="flex-shrink:0">Details</a>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><div class="event-day">15</div><div class="event-month">Jun</div></div>
+            <div class="event-divider"></div>
+            <div class="event-info">
+              <div class="event-name">Jugendrüstzeit — Glaube &amp; Zukunft</div>
+              <div class="event-details">
+                <span class="event-detail"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Fr. 18:00 — So. 14:00</span>
+                <span class="event-detail"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Freizeitheim Spreewald</span>
+                <span class="tag">Anmeldung</span>
+              </div>
+            </div>
+            <a href="#" class="btn btn-accent btn-sm" style="flex-shrink:0">Anmelden</a>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><div class="event-day">22</div><div class="event-month">Jun</div></div>
+            <div class="event-divider"></div>
+            <div class="event-info">
+              <div class="event-name">Abend des Gebets — Stadtgebet Berlin</div>
+              <div class="event-details">
+                <span class="event-detail"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>19:00 Uhr</span>
+                <span class="event-detail"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Hauptkirche</span>
+                <span class="tag">Offen für alle</span>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="flex-shrink:0">Details</a>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><div class="event-day">29</div><div class="event-month">Jun</div></div>
+            <div class="event-divider"></div>
+            <div class="event-info">
+              <div class="event-name">Alpha-Kurs — Wer ist Jesus?</div>
+              <div class="event-details">
+                <span class="event-detail"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Do. 19:30 Uhr</span>
+                <span class="event-detail">10 Abende</span>
+                <span class="tag">Kostenlos</span>
+              </div>
+            </div>
+            <a href="#" class="btn btn-accent btn-sm" style="flex-shrink:0">Anmelden</a>
+          </div>
+        </div>
+        <a href="#" class="btn btn-outline" style="margin-top:1.5rem">Alle Veranstaltungen</a>
+      </div>
+      <div class="fade-in">
+        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=800&q=80" alt="Gemeinschaftsevent" loading="lazy" style="border-radius:var(--r-xl);width:100%;aspect-ratio:4/5;object-fit:cover;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NACHRICHTEN ═══ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">News &amp; Updates</span>
+      <h2 class="section-title">Aus dem Leben der Gemeinde</h2>
+      <p class="section-subtitle">Geschichten, Ankündigungen und Berichte aus unserer Gemeinschaft.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-in">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=700&q=80" alt="Soziales Engagement" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              18. Mai 2025
+            </span>
+            <a href="#" class="tag">Diakonie</a>
+          </div>
+          <div class="card-title">150 Mahlzeiten für Berliner Obdachlose — unser Team war dabei</div>
+          <p class="card-excerpt">Vergangenen Samstag hat unser Diakoniekreis wieder gemeinsam mit dem Berliner Kältehilfe-Netzwerk warme Mahlzeiten in Mitte und Neukölln verteilt.</p>
+          <div class="card-footer">
+            <a href="#" class="btn btn-outline btn-sm">Weiterlesen</a>
+            <span style="font-size:.78rem;color:var(--gray-400)">4 Min</span>
+          </div>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=700&q=80" alt="Gemeinschaftsgruppe" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              12. Mai 2025
+            </span>
+            <a href="#" class="tag">Gemeinschaft</a>
+          </div>
+          <div class="card-title">Neue Kleingruppen ab September — jetzt Platz sichern</div>
+          <p class="card-excerpt">Ab September starten sieben neue Kleingruppen in verschiedenen Berliner Bezirken. Von Bibelstudium bis zu Hauskreisen für junge Familien ist alles dabei.</p>
+          <div class="card-footer">
+            <a href="#" class="btn btn-outline btn-sm">Weiterlesen</a>
+            <span style="font-size:.78rem;color:var(--gray-400)">3 Min</span>
+          </div>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700&q=80" alt="Mission" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              5. Mai 2025
+            </span>
+            <a href="#" class="tag">Mission</a>
+          </div>
+          <div class="card-title">Gemeindegründung in Leipzig — ein Traum wird Wirklichkeit</div>
+          <p class="card-excerpt">Nach zwei Jahren Gebet und Vorbereitung hat unser Missionsteam in Leipzig offiziell eine neue Gemeinde gegründet. Ein Bericht von Pastor Jonas Klein.</p>
+          <div class="card-footer">
+            <a href="#" class="btn btn-outline btn-sm">Weiterlesen</a>
+            <span style="font-size:.78rem;color:var(--gray-400)">6 Min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Geschichten</span>
+      <h2 class="section-title">Veränderte Leben</h2>
+      <p class="section-subtitle">Echte Menschen, echte Begegnungen mit Gott.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-in">
+        <p class="testi-text">„Ich kam als Skeptiker in die Gemeinde. Was ich fand, war keine Religion — sondern echte Gemeinschaft und eine Begegnung, die mein Leben auf den Kopf gestellt hat."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Markus" loading="lazy"></div>
+          <div><div class="testi-name">Markus, 34</div><div class="testi-role">Seit 3 Jahren dabei</div></div>
+        </div>
+      </div>
+      <div class="testi-card fade-in">
+        <p class="testi-text">„Nach einer schwierigen Scheidung war ich am Ende. Die Gemeinde hat mich aufgenommen, begleitet und mir geholfen, wieder aufzustehen. Gott hat mich nicht aufgegeben."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" alt="Sarah" loading="lazy"></div>
+          <div><div class="testi-name">Sarah, 41</div><div class="testi-role">Seit 5 Jahren dabei</div></div>
+        </div>
+      </div>
+      <div class="testi-card fade-in">
+        <p class="testi-text">„Als Teenager fand ich in der Jugend nicht nur Freunde, sondern auch Antworten auf die großen Fragen. Mein Glaube ist heute das Fundament meines Lebens."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="Tim" loading="lazy"></div>
+          <div><div class="testi-name">Tim, 22</div><div class="testi-role">Seit 7 Jahren dabei</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TEAM ═══ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Unser Team</span>
+      <h2 class="section-title">Pastoren &amp; Leiter</h2>
+      <p class="section-subtitle">Menschen, die dienen — aus Berufung, nicht aus Pflicht.</p>
+    </div>
+    <div class="grid-4">
+      <div class="team-card fade-in">
+        <div class="team-photo"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80" alt="Pastor Andreas Weber" loading="lazy"></div>
+        <div class="team-name">Pastor Andreas Weber</div>
+        <div class="team-role">Leitender Pastor</div>
+        <p class="team-bio">Andreas leitet die Gemeinde seit 2007 und brennt für das Evangelium in der Stadt Berlin.</p>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-photo"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500&q=80" alt="Pastorin Ruth Müller" loading="lazy"></div>
+        <div class="team-name">Pastorin Ruth Müller</div>
+        <div class="team-role">Seelsorge &amp; Frauen</div>
+        <p class="team-bio">Ruth begleitet Menschen in Lebenskrisen und leitet den Frauendienst der Gemeinde.</p>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-photo"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80" alt="Dr. Simon Kraft" loading="lazy"></div>
+        <div class="team-name">Dr. Simon Kraft</div>
+        <div class="team-role">Lehre &amp; Akademie</div>
+        <p class="team-bio">Simon verantwortet die Bibelschule und tiefgreifende Lehrseries für Erwachsene.</p>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-photo"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80" alt="Lena Hoffmann" loading="lazy"></div>
+        <div class="team-name">Lena Hoffmann</div>
+        <div class="team-role">Jugend &amp; Kinder</div>
+        <p class="team-bio">Lena liebt die nächste Generation und leitet alle Kinder- und Jugendprogramme.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="#" class="btn btn-outline">Gesamtes Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPENDEN ═══ -->
+<section class="donate-section" id="spenden">
+  <div class="container">
+    <div class="donate-inner">
+      <div class="donate-text fade-in">
+        <span class="section-label">Generosität</span>
+        <h2 class="donate-title">Deine Gabe bewegt Großes</h2>
+        <p class="donate-desc">Jeder Beitrag — klein oder groß — hilft uns, Menschen in Berlin zu erreichen, soziale Projekte zu unterstützen und das Evangelium in die Welt zu tragen.</p>
+        <ul style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem">
+          <li style="display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,.88);font-size:.95rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Obdachlosenhilfe &amp; Sozialarbeit in Berlin
+          </li>
+          <li style="display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,.88);font-size:.95rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Missionsprojekte in Osteuropa
+          </li>
+          <li style="display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,.88);font-size:.95rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Kostenlose Angebote für Familien
+          </li>
+          <li style="display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,.88);font-size:.95rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Neue Gemeinden in Deutschland
+          </li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:.875rem">
+          <a href="#" class="btn btn-outline-light btn-lg">Online spenden</a>
+          <a href="#" class="btn btn-outline-light">Banküberweisung</a>
+        </div>
+      </div>
+      <div class="donate-box fade-in">
+        <div style="font-size:2.5rem;margin-bottom:1rem">🤲</div>
+        <h3>Einfach &amp; sicher spenden</h3>
+        <p>Einmalig oder regelmäßig — du entscheidest. 100% deiner Spende fließt in die Gemeindearbeit.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem">
+          <button style="padding:.65rem;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);border-radius:var(--r-md);color:white;font-size:.9rem;font-weight:600;cursor:pointer;font-family:var(--ff-body)">20 €</button>
+          <button style="padding:.65rem;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);border-radius:var(--r-md);color:white;font-size:.9rem;font-weight:600;cursor:pointer;font-family:var(--ff-body)">50 €</button>
+          <button style="padding:.65rem;border:2px solid white;background:rgba(255,255,255,.2);border-radius:var(--r-md);color:white;font-size:.9rem;font-weight:700;cursor:pointer;font-family:var(--ff-body)">100 €</button>
+          <button style="padding:.65rem;border:2px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);border-radius:var(--r-md);color:white;font-size:.9rem;font-weight:600;cursor:pointer;font-family:var(--ff-body)">Anderer Betrag</button>
+        </div>
+        <a href="#" style="display:block;padding:.85rem;background:white;color:#8B5E10;border-radius:var(--r-md);font-weight:700;font-size:1rem;text-decoration:none;transition:opacity .2s;font-family:var(--ff-body)">Jetzt spenden →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <span class="section-label">Informiert bleiben</span>
+      <h2>Wöchentliche Updates per E-Mail</h2>
+      <p>Predigtzusammenfassungen, Veranstaltungshinweise und Geschichten aus der Gemeinde — direkt in dein Postfach.</p>
+      <form class="nl-form" onsubmit="return false">
+        <label for="nl-email" style="position:absolute;left:-9999px">E-Mail-Adresse</label>
+        <input type="email" id="nl-email" placeholder="deine@email.de" autocomplete="email">
+        <button type="submit" class="btn btn-primary">Anmelden</button>
+      </form>
+      <p class="nl-note">Kein Spam. Jederzeit abmeldbar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="kontakt">
+  <div class="container">
+    <div class="ftr-grid">
+      <div class="ftr-brand">
+        <strong>Evangeliums Gemeinde Berlin</strong>
+        <p>Eine Gemeinschaft auf dem Fundament Jesu Christi — herzlich, ehrlich, lebendig. Du bist willkommen.</p>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Facebook">fb</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="YouTube">yt</a>
+          <a href="#" class="social-btn" aria-label="Telegram">tg</a>
+          <a href="#" class="social-btn" aria-label="Spotify">sp</a>
+        </div>
+      </div>
+      <div class="ftr-col">
+        <h4>Entdecken</h4>
+        <div class="ftr-nav">
+          <a href="#">Startseite</a>
+          <a href="#">Über uns</a>
+          <a href="#">Was wir glauben</a>
+          <a href="#">Unser Team</a>
+          <a href="#">Mission</a>
+          <a href="#">Akademie</a>
+        </div>
+      </div>
+      <div class="ftr-col">
+        <h4>Gemeinschaft</h4>
+        <div class="ftr-nav">
+          <a href="#">Verbinden</a>
+          <a href="#">Dienste &amp; Bereiche</a>
+          <a href="#">Veranstaltungen</a>
+          <a href="#">Gebet</a>
+          <a href="#">Kleingruppen</a>
+          <a href="#">Newsletter</a>
+        </div>
+      </div>
+      <div class="ftr-col">
+        <h4>Kontakt</h4>
+        <div class="ftr-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Auguststraße 87<br>10117 Berlin-Mitte</span>
+        </div>
+        <div class="ftr-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>So 10:00 &amp; 17:00 Uhr<br>Mi 19:00 Uhr</span>
+        </div>
+        <div class="ftr-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@eg-berlin.de" style="color:inherit">info@eg-berlin.de</a>
+        </div>
+        <div class="ftr-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.69 19 19.5 19.5 0 0 1 4.9 12.21 19.79 19.79 0 0 1 2.12 3.96 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 5.86 5.86l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+493012345678" style="color:inherit">+49 30 123 456 78</a>
+        </div>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <p>&copy; 2025 Evangeliums Gemeinde Berlin e.V. Alle Rechte vorbehalten.</p>
+      <div class="ftr-legal">
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+        <a href="#">Nutzungsbedingungen</a>
+        <a href="#">Cookie-Richtlinie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Smooth fade-in on scroll
+  if('IntersectionObserver' in window){
+    const obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    },{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
+    document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
+  } else {
+    document.querySelectorAll('.fade-in').forEach(function(el){ el.classList.add('visible'); });
+  }
+
+  // Header active state on scroll
+  const hdr = document.querySelector('header');
+  window.addEventListener('scroll',function(){
+    hdr.style.boxShadow = window.scrollY > 8 ? '0 2px 20px rgba(0,0,0,.1)' : '';
+  },{passive:true});
+
+  // Donate amount buttons
+  document.querySelectorAll('.donate-box button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.donate-box button').forEach(function(b){
+        b.style.borderColor = 'rgba(255,255,255,.3)';
+        b.style.background = 'rgba(255,255,255,.1)';
+        b.style.fontWeight = '600';
+      });
+      btn.style.borderColor = 'white';
+      btn.style.background = 'rgba(255,255,255,.25)';
+      btn.style.fontWeight = '700';
+    });
+  });
+
+  // Events layout responsive
+  function fixEventsLayout(){
+    const el = document.querySelector('.events-layout');
+    if(!el) return;
+    el.style.gridTemplateColumns = window.innerWidth < 900 ? '1fr' : '1fr 1fr';
+  }
+  fixEventsLayout();
+  window.addEventListener('resize', fixEventsLayout);
+})();
+</script>
+</body>
+</html>
