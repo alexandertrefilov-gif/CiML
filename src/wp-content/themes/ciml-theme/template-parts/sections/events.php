@@ -23,7 +23,7 @@ $events = array(
 			<p class="section-subtitle"><?php esc_html_e( 'Statische Event-Präsentation. Keine Anmeldung, keine Warteliste und keine Formularlogik.', 'ciml-theme' ); ?></p>
 			<div class="events-list">
 				<?php foreach ( $events as $event ) : ?>
-					<article class="event-row">
+					<article class="event-row fade-in fade-in--stagger">
 						<div class="datebox">
 							<strong><?php echo esc_html( $event['day'] ); ?></strong>
 							<span><?php echo esc_html( $event['month'] ); ?></span>

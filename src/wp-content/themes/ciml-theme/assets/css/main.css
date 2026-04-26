@@ -16,6 +16,11 @@
 	--ciml-radius-lg: 18px;
 	--ciml-radius-xl: 26px;
 	--ciml-shadow-lg: 0 14px 45px rgba(0, 0, 0, 0.14);
+	--ciml-motion-fast: 160ms;
+	--ciml-motion-base: 280ms;
+	--ciml-motion-slow: 520ms;
+	--ciml-motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+	--ciml-reveal-distance: 22px;
 }
 
 body {
@@ -99,12 +104,15 @@ body {
 .site-header {
 	background: rgba(255, 255, 255, 0.97);
 	border-bottom: 1px solid var(--ciml-gray-100);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	transition: background-color var(--ciml-motion-base) var(--ciml-motion-ease), box-shadow var(--ciml-motion-base) var(--ciml-motion-ease);
 	position: sticky;
 	top: 0;
 	z-index: 900;
 }
 
-.site-header.has-shadow {
+.site-header.has-shadow,
+.site-header.is-scrolled {
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -119,6 +127,22 @@ body {
 .logo-wrap {
 	color: inherit;
 	text-decoration: none;
+	transition: opacity var(--ciml-motion-fast) var(--ciml-motion-ease), transform var(--ciml-motion-fast) var(--ciml-motion-ease);
+}
+
+.logo-wrap:hover {
+	opacity: 0.94;
+}
+
+.logo-wrap:focus-visible {
+	border-radius: var(--ciml-radius-sm);
+	outline: 3px solid rgba(227, 183, 91, 0.72);
+	outline-offset: 4px;
+}
+
+.btn,
+.site-header nav a {
+	transition: color var(--ciml-motion-fast) var(--ciml-motion-ease), background-color var(--ciml-motion-fast) var(--ciml-motion-ease), border-color var(--ciml-motion-fast) var(--ciml-motion-ease), box-shadow var(--ciml-motion-fast) var(--ciml-motion-ease), transform var(--ciml-motion-fast) var(--ciml-motion-ease), opacity var(--ciml-motion-fast) var(--ciml-motion-ease);
 }
 
 .logo-text strong {
@@ -604,8 +628,25 @@ body {
 	text-decoration: none;
 }
 
+.btn:hover {
+	transform: translateY(-1px);
+}
+
+.btn:focus-visible,
+.site-header nav a:focus-visible {
+	border-radius: 10px;
+	outline: 3px solid rgba(227, 183, 91, 0.78);
+	outline-offset: 3px;
+}
+
 .btn-outline-light {
 	border-color: rgba(255, 255, 255, 0.7);
+	color: #fff;
+}
+
+.btn-outline-light:hover {
+	background: rgba(255, 255, 255, 0.09);
+	border-color: rgba(255, 255, 255, 0.92);
 	color: #fff;
 }
 
@@ -788,14 +829,167 @@ body {
 }
 
 .fade-in {
-	opacity: 0;
-	transform: translateY(24px);
-	transition: opacity 0.65s ease, transform 0.65s ease;
-}
-
-.fade-in.visible {
 	opacity: 1;
 	transform: none;
+}
+
+.fade-in.visible,
+.fade-in.is-visible,
+.reveal.visible,
+.reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+html.js .fade-in,
+html.js .reveal {
+	opacity: 0;
+	transform: translate3d(0, var(--ciml-reveal-distance), 0);
+	transition:
+		opacity var(--ciml-reveal-duration, var(--ciml-motion-base)) var(--ciml-motion-ease) var(--ciml-reveal-delay, 0ms),
+		transform var(--ciml-reveal-duration, var(--ciml-motion-base)) var(--ciml-motion-ease) var(--ciml-reveal-delay, 0ms),
+		box-shadow var(--ciml-motion-fast) var(--ciml-motion-ease),
+		background-color var(--ciml-motion-fast) var(--ciml-motion-ease),
+		border-color var(--ciml-motion-fast) var(--ciml-motion-ease),
+		color var(--ciml-motion-fast) var(--ciml-motion-ease);
+	will-change: opacity, transform;
+}
+
+html.js .fade-in.is-visible,
+html.js .fade-in.visible,
+html.js .reveal.is-visible,
+html.js .reveal.visible {
+	opacity: 1;
+	transform: none;
+	will-change: auto;
+}
+
+html.js .fade-in--slow {
+	--ciml-reveal-duration: var(--ciml-motion-slow);
+}
+
+html.js .fade-in--stagger {
+	--ciml-reveal-delay: 90ms;
+}
+
+html.js .hero-inner.fade-in {
+	--ciml-reveal-delay: 90ms;
+}
+
+html.js .hero-admin-note.fade-in {
+	--ciml-reveal-delay: 240ms;
+}
+
+html.js .section-header.fade-in,
+html.js .text-block.fade-in,
+html.js .split-img.fade-in,
+html.js .phase-outline.fade-in,
+html.js .form.fade-in,
+html.js .admin-preview.fade-in {
+	--ciml-reveal-delay: 70ms;
+}
+
+html.js .grid-3 > .fade-in:nth-child(1),
+html.js .grid-4 > .fade-in:nth-child(1),
+html.js .info-grid > .fade-in:nth-child(1),
+html.js .legal-grid > .fade-in:nth-child(1),
+html.js .contact-panel > .fade-in:nth-child(1),
+html.js .roadmap > .fade-in:nth-child(1) {
+	--ciml-reveal-delay: 0ms;
+}
+
+html.js .grid-3 > .fade-in:nth-child(2),
+html.js .grid-4 > .fade-in:nth-child(2),
+html.js .info-grid > .fade-in:nth-child(2),
+html.js .legal-grid > .fade-in:nth-child(2),
+html.js .contact-panel > .fade-in:nth-child(2),
+html.js .roadmap > .fade-in:nth-child(2) {
+	--ciml-reveal-delay: 90ms;
+}
+
+html.js .grid-3 > .fade-in:nth-child(3),
+html.js .grid-4 > .fade-in:nth-child(3),
+html.js .info-grid > .fade-in:nth-child(3),
+html.js .legal-grid > .fade-in:nth-child(3),
+html.js .contact-panel > .fade-in:nth-child(3),
+html.js .roadmap > .fade-in:nth-child(3) {
+	--ciml-reveal-delay: 180ms;
+}
+
+html.js .grid-3 > .fade-in:nth-child(4),
+html.js .grid-4 > .fade-in:nth-child(4),
+html.js .info-grid > .fade-in:nth-child(4),
+html.js .legal-grid > .fade-in:nth-child(4),
+html.js .contact-panel > .fade-in:nth-child(4),
+html.js .roadmap > .fade-in:nth-child(4) {
+	--ciml-reveal-delay: 270ms;
+}
+
+html.js .roadmap > .fade-in:nth-child(5) {
+	--ciml-reveal-delay: 360ms;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.card,
+	.ministry-card,
+	.event-row,
+	.team-card,
+	.phase-outline,
+	.admin-preview,
+	.roadmap-step,
+	.form,
+	.contact-panel .card {
+		transition: box-shadow var(--ciml-motion-base) var(--ciml-motion-ease), transform var(--ciml-motion-base) var(--ciml-motion-ease), border-color var(--ciml-motion-base) var(--ciml-motion-ease);
+	}
+
+	.card:hover,
+	.ministry-card:hover,
+	.event-row:hover,
+	.team-card:hover,
+	.phase-outline:hover,
+	.admin-preview:hover,
+	.roadmap-step:hover,
+	.form:hover,
+	.contact-panel .card:hover {
+		box-shadow: 0 16px 42px rgba(0, 0, 0, 0.14);
+		transform: translateY(-3px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html,
+	body {
+		scroll-behavior: auto;
+	}
+
+	.site-header,
+	.logo-wrap,
+	.btn,
+	.site-header nav a,
+	.card,
+	.ministry-card,
+	.event-row,
+	.team-card,
+	.phase-outline,
+	.admin-preview,
+	.roadmap-step,
+	.form,
+	.contact-panel .card {
+		transition: none !important;
+	}
+
+	.fade-in,
+	.reveal {
+		opacity: 1 !important;
+		transform: none !important;
+		will-change: auto !important;
+	}
+
+	html.js .fade-in,
+	html.js .reveal {
+		opacity: 1 !important;
+		transform: none !important;
+	}
 }
 
 @media (max-width: 1100px) {

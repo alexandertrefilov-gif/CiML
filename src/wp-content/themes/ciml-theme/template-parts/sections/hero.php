@@ -18,14 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	<div class="hero-overlay" aria-hidden="true"></div>
 	<div class="container hero-content">
-		<div class="hero-inner fade-in">
+		<div class="hero-inner fade-in fade-in--slow">
 			<span class="phase-pill"><?php esc_html_e( 'Phase 1 Skeleton · Öffentliches Portal', 'ciml-theme' ); ?></span>
 			<p class="hero-label"><?php esc_html_e( 'Christus ist mein Leben', 'ciml-theme' ); ?></p>
 			<h1><?php esc_html_e( 'Eine Gemeinde, die Menschen zu Christus führt.', 'ciml-theme' ); ?></h1>
 			<p><?php esc_html_e( 'Placeholder aus dem aktiven Phase-1-Prototyp. Diese Inhalte werden später über ciml-core gepflegt.', 'ciml-theme' ); ?></p>
 		</div>
 	</div>
-	<aside class="hero-admin-note fade-in">
+	<aside class="hero-admin-note fade-in fade-in--stagger">
 		<strong><?php esc_html_e( 'Phase-1-Skeleton', 'ciml-theme' ); ?></strong>
 		<p><?php esc_html_e( 'Nur Präsentation im Theme. Keine Portal-Logik, keine Admin-Funktionen und keine sensiblen Module.', 'ciml-theme' ); ?></p>
 	</aside>
