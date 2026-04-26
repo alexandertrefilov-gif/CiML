@@ -1,0 +1,76 @@
+Du arbeitest als Senior WordPress Security Architect und Full-Stack Entwickler.
+
+Projekt:
+Gemeindeportal „Christus ist mein Leben“.
+
+Aufgabe:
+Bereite Phase 3 „Sensible Begleitung“ vor. Baue keine unsichere Schnelllösung.
+
+Phase 3 umfasst:
+- Seelsorge-Anfragen
+- interne Gebetsanliegen-Prüfung
+- freigegebene/anonymisierte Gebetsliste
+- Kinder- und Jugendschutz als Schutzkonzept
+- Datenschutz / Einwilligungen
+- Audit-Log
+- Löschung / Export
+
+Nicht bauen:
+- medizinische/psychologische Therapieplattform
+- Notfall-Chat
+- automatische öffentliche Gebetswand
+- Kinderschutz-Fallverwaltung ohne Spezialkonzept
+- Mitgliederbereich
+- Dienstpläne
+
+Pflichtarchitektur:
+1. Sensible Daten nicht als normale öffentliche Posts behandeln.
+2. Kein REST, keine Suche, keine Sitemap, kein RSS für sensible Einträge.
+3. Zugriff nur über eigene Capabilities.
+4. Zugriff und Statusänderungen auditieren.
+5. E-Mails dürfen keine vollständigen sensiblen Inhalte enthalten.
+6. Notfallhinweis sichtbar anzeigen.
+7. Datenschutz- und Seelsorge-Einwilligung als Pflicht.
+8. Demo-Daten klar markieren und löschbar machen.
+
+Rollen:
+- ciml_care_lead
+- ciml_care_worker
+- ciml_prayer_lead
+- ciml_prayer_team
+- ciml_safeguarding_officer
+- ciml_security_auditor
+
+Capabilities:
+- read_ciml_care_requests
+- manage_ciml_care_requests
+- assign_ciml_care_requests
+- read_assigned_ciml_care_requests
+- read_ciml_prayer_requests
+- review_ciml_prayer_requests
+- read_approved_prayer_items
+- manage_ciml_safeguarding
+- view_ciml_sensitive_audit
+- export_ciml_sensitive_data
+- delete_ciml_sensitive_data
+
+Admin-Menü:
+CImL Portal
+- Sensible Begleitung
+  - Sicherheitsübersicht
+  - Seelsorge-Anfragen
+  - Gebetsanliegen prüfen
+  - Freigegebene Gebetsliste
+  - Schutzkonzept
+  - Datenschutz / Einwilligungen
+  - Audit-Log
+  - Löschung / Export
+
+Datenmodelle:
+Nutze die Spezifikation aus `Phase3_Vorbereitung_und_Ausfuehrung.md`.
+
+Demo-Daten:
+Nutze `phase3-demo-data.json`.
+
+Wichtig:
+Wenn ein Sicherheitsaspekt nicht sauber lösbar ist, markiere ihn als BLOCKER und baue das Modul nicht halb.

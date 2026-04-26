@@ -1,0 +1,13 @@
+ID;Epic;Aufgabe;Priorität;Abhängigkeit;DoD
+P3-001;Security;Sicherheitsarchitektur für sensible Daten finalisieren;Kritisch;Phase 2 abgeschlossen;Security-Gate dokumentiert
+P3-002;Rollen;Care/Prayer/Safeguarding Rollen definieren;Kritisch;P3-001;Capabilities dokumentiert
+P3-003;Datenmodell;ciml_care_request Modell definieren;Kritisch;P3-001;Felder/Status/Sichtbarkeit definiert
+P3-004;Datenmodell;ciml_prayer_request Modell definieren;Hoch;P3-001;Review-/Freigabelogik definiert
+P3-005;Datenmodell;Schutzkonzept-Modell definieren;Hoch;P3-001;öffentliche Schutzinfo getrennt von Fallverwaltung
+P3-006;Admin;Admin-Menü Sensible Begleitung planen;Hoch;P3-002;nur berechtigte Rollen sichtbar
+P3-007;Formulare;Seelsorge-Anfrageformular spezifizieren;Kritisch;P3-003;Notfallhinweis/Einwilligung enthalten
+P3-008;Formulare;Gebetsanliegen-Prüfformular spezifizieren;Hoch;P3-004;keine automatische Veröffentlichung
+P3-009;Audit;Audit-Log für Zugriff/Status/Zuweisung planen;Kritisch;P3-001;alle sensiblen Aktionen protokolliert
+P3-010;Privacy;Lösch-/Archivierungslogik definieren;Kritisch;P3-001;Retention-Felder vorhanden
+P3-011;Demo;Phase-3-Demo-Daten vorbereiten;Mittel;P3-003/P3-004/P3-005;Demo-Daten markiert/löschbar
+P3-012;QA;Security- und Abnahmeplan ausführen;Kritisch;alle;NO-GO bei Zugriffslücke

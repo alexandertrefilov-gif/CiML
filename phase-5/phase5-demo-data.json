@@ -1,0 +1,94 @@
+{
+  "project": {
+    "name": "Christus ist mein Leben",
+    "phase": "Phase 5 – Governance und Betrieb",
+    "warning": "DEMO-DATEN – Betriebs- und Governancebeispiele"
+  },
+  "system_status": {
+    "wordpress_version": "6.6 Demo",
+    "theme_version": "ciml-theme 1.0.0-demo",
+    "core_plugin_version": "ciml-core 0.5.0-demo",
+    "last_backup": "2026-06-21 02:15",
+    "last_restore_test": "2026-06-14 09:00",
+    "open_approvals": 4,
+    "open_deletion_requests": 1,
+    "security_warnings": 0,
+    "demo_data_active": true,
+    "internal_noindex": true,
+    "sensitive_rest_blocked": true
+  },
+  "audit_log": [
+    {
+      "time": "2026-06-21 09:05",
+      "event": "file_downloaded",
+      "user": "Anna Schneider",
+      "severity": "info",
+      "object": "Lobpreis-Ablauf v1.1"
+    },
+    {
+      "time": "2026-06-21 09:30",
+      "event": "content_updated",
+      "user": "Viktor Neumann",
+      "severity": "notice",
+      "object": "Dienstplan Sonntag 10:00"
+    },
+    {
+      "time": "2026-06-21 10:10",
+      "event": "release_reviewed",
+      "user": "Daniel Hoffmann",
+      "severity": "info",
+      "object": "Phase 2.1"
+    },
+    {
+      "time": "2026-06-21 10:45",
+      "event": "backup_completed",
+      "user": "System",
+      "severity": "info",
+      "object": "Pre-Release Backup"
+    },
+    {
+      "time": "2026-06-21 11:00",
+      "event": "role_changed",
+      "user": "Technical Admin",
+      "severity": "warning",
+      "object": "Leon Maier"
+    }
+  ],
+  "release": {
+    "name": "Phase 2.1 – Kursanmeldungen verbessert",
+    "status": "in_review",
+    "backup": "erfolgreich",
+    "gate": "wartet auf Rollenprüfung",
+    "rollback_plan": "vorhanden"
+  },
+  "incident": {
+    "title": "Demo – falscher Zugriff auf internes Dokument verhindert",
+    "severity": "SEV3",
+    "type": "access_error",
+    "status": "contained",
+    "owner": "Security Reviewer",
+    "actions_taken": "Rollenprüfung angepasst, Audit-Eintrag erstellt."
+  },
+  "role_review": [
+    {
+      "role": "administrator",
+      "users": 2,
+      "status": "review monthly"
+    },
+    {
+      "role": "ciml_manager",
+      "users": 3,
+      "status": "ok"
+    },
+    {
+      "role": "ciml_care_worker",
+      "users": 2,
+      "status": "2FA required"
+    },
+    {
+      "role": "ciml_team_leader",
+      "users": 6,
+      "status": "quarterly review"
+    }
+  ]
+}

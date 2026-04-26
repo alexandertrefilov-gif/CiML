@@ -1,0 +1,69 @@
+Du arbeitest als Senior WordPress Architect und Security Engineer.
+
+Projekt:
+Gemeindeportal „Christus ist mein Leben“.
+
+Aufgabe:
+Bereite Phase 4 „Mitgliederbereich“ vor und setze die Grundstruktur sicher um.
+
+Phase 4 umfasst:
+- Mitgliederbereich nach Login
+- Mitgliederprofile
+- interne Termine
+- Dienstpläne
+- interne Dokumente
+- Schulungen
+- interne Nachrichten
+- Downloads
+- Zugriffsprüfung
+
+Nicht bauen:
+- Seelsorgefälle im Mitgliederbereich
+- vertrauliche Gebetsfälle im Mitgliederbereich
+- Kinderschutz-Fallverwaltung
+- offene Mitgliederliste
+- Chat-System
+- Zahlungsverwaltung
+
+Pflicht:
+1. Mitgliederbereich nur nach Login.
+2. Interne Seiten noindex.
+3. Interne Dateien nur über Berechtigungsprüfung ausliefern.
+4. Dienstpläne nur für betroffene Teams/Rollen.
+5. Rollenwechsel und Zugriff optional auditieren.
+6. Deaktivierte Mitglieder verlieren Zugriff.
+7. Datenschutz-Einwilligung für internen Bereich.
+8. Keine Phase-3-Daten im Mitgliederbereich.
+
+Rollen:
+- ciml_member
+- ciml_team_member
+- ciml_team_leader
+- ciml_training_manager
+- ciml_document_manager
+- ciml_membership_manager
+- ciml_leadership
+- administrator
+
+Datenmodelle:
+Nutze `Phase4_Vorbereitung_und_Ausfuehrung.md`.
+
+Demo-Daten:
+Nutze `phase4-demo-data.json`.
+
+Admin-Menü:
+CImL Portal
+- Mitgliederbereich
+  - Übersicht
+  - Mitgliederzugänge
+  - Interne Termine
+  - Dienstpläne
+  - Interne Dokumente
+  - Schulungen
+  - Interne Nachrichten
+  - Downloads
+  - Zugriffsprüfung
+  - Einwilligungen
+
+Wichtig:
+Wenn Dateischutz nicht sicher umgesetzt werden kann, markiere BLOCKER und baue Downloads nicht halb.

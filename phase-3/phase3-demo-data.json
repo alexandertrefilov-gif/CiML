@@ -1,0 +1,96 @@
+{
+  "project": {
+    "name": "Christus ist mein Leben",
+    "phase": "Phase 3 – Sensible Begleitung",
+    "warning": "DEMO-DATEN – keine echten Seelsorge- oder Gebetsdaten verwenden."
+  },
+  "care_requests": [
+    {
+      "request_id": "CARE-DEMO-001",
+      "display_name": "Demo Person A",
+      "topic": "Lebenskrise",
+      "urgency": "normal",
+      "preferred_contact": "Telefon",
+      "status": "triage",
+      "sensitivity_level": "sensitive",
+      "assigned_to": "Maria Hoffmann",
+      "created_at": "2026-06-02T10:15:00",
+      "retention_until": "2026-12-02",
+      "public": false
+    },
+    {
+      "request_id": "CARE-DEMO-002",
+      "display_name": "Demo Person B",
+      "topic": "Glaubensfragen",
+      "urgency": "soon",
+      "preferred_contact": "E-Mail",
+      "status": "assigned",
+      "sensitivity_level": "normal",
+      "assigned_to": "Pastor Daniel Hoffmann",
+      "created_at": "2026-06-03T14:30:00",
+      "retention_until": "2026-12-03",
+      "public": false
+    }
+  ],
+  "prayer_requests": [
+    {
+      "request_id": "PRAY-DEMO-001",
+      "category": "Familie",
+      "summary": "Bitte betet für Frieden und Weisheit in einer schwierigen familiären Situation.",
+      "status": "review_required",
+      "sensitivity_level": "normal",
+      "may_share_with_prayer_team": true,
+      "may_share_anonymized": false,
+      "public": false
+    },
+    {
+      "request_id": "PRAY-DEMO-002",
+      "category": "Krankheit",
+      "summary": "Bitte betet für Kraft während einer Behandlung.",
+      "status": "anonymized_for_team",
+      "sensitivity_level": "sensitive",
+      "may_share_with_prayer_team": true,
+      "may_share_anonymized": true,
+      "public": false
+    },
+    {
+      "request_id": "PRAY-DEMO-003",
+      "category": "Seelsorge",
+      "summary": "Persönliches Anliegen mit Gesprächsbedarf.",
+      "status": "redirected_to_care",
+      "sensitivity_level": "care_required",
+      "may_share_with_prayer_team": false,
+      "may_share_anonymized": false,
+      "public": false
+    }
+  ],
+  "safeguarding": {
+    "title": "Kinder- und Jugendschutz",
+    "officer_name": "Elena Fischer",
+    "contact_email": "schutz@christus-ist-mein-leben.de",
+    "last_review_date": "2026-04-30",
+    "next_review_date": "2026-10-30",
+    "status": "draft",
+    "public_summary": "Unsere Gemeinde verpflichtet sich zu einem sicheren Umfeld für Kinder, Jugendliche und schutzbedürftige Personen."
+  },
+  "audit_examples": [
+    {
+      "time": "2026-06-02 10:16",
+      "user": "Maria Hoffmann",
+      "action": "care_request_viewed",
+      "item": "CARE-DEMO-001"
+    },
+    {
+      "time": "2026-06-02 10:20",
+      "user": "Maria Hoffmann",
+      "action": "care_request_status_changed",
+      "item": "CARE-DEMO-001"
+    },
+    {
+      "time": "2026-06-03 09:02",
+      "user": "Anna Schneider",
+      "action": "prayer_request_reviewed",
+      "item": "PRAY-DEMO-002"
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "project": {
+    "name": "Christus ist mein Leben",
+    "subtitle": "Evangelische Freikirche Stuttgart",
+    "address": "Königstraße 45, 70173 Stuttgart",
+    "email": "kontakt@christus-ist-mein-leben.de",
+    "phone": "+49 711 12345678",
+    "languages": [
+      "Deutsch",
+      "Russisch",
+      "Englisch"
+    ],
+    "note": "DEMO-DATEN – vor Livegang ersetzen."
+  },
+  "smallgroups": [
+    {
+      "title": "Kleingruppe Stuttgart-Mitte",
+      "leader_name": "Markus Weber",
+      "co_leader_name": "Julia Weber",
+      "district": "Stuttgart-Mitte",
+      "weekday": "Mittwoch",
+      "start_time": "19:30",
+      "rhythm": "wöchentlich",
+      "language": "Deutsch",
+      "target_group": "Erwachsene",
+      "topic": "Bibel und Alltag",
+      "max_participants": 12,
+      "current_participants": 8,
+      "signup_open": true,
+      "visibility": "public",
+      "status": "published",
+      "short_description": "Gemeinschaft, Bibelgespräch und Gebet mitten in Stuttgart."
+    },
+    {
+      "title": "Kleingruppe Bad Cannstatt",
+      "leader_name": "Elena Fischer",
+      "co_leader_name": "Sergej Fischer",
+      "district": "Bad Cannstatt",
+      "weekday": "Donnerstag",
+      "start_time": "19:00",
+      "rhythm": "wöchentlich",
+      "language": "Deutsch/Russisch",
+      "target_group": "Familien",
+      "topic": "Familie und Glaube",
+      "max_participants": 14,
+      "current_participants": 13,
+      "signup_open": true,
+      "visibility": "request_only",
+      "status": "published",
+      "short_description": "Hauskreis für Familien mit Austausch über Glauben im Alltag."
+    },
+    {
+      "title": "Junge Erwachsene",
+      "leader_name": "David Klein",
+      "co_leader_name": "Nina Berger",
+      "district": "Stuttgart-West",
+      "weekday": "Freitag",
+      "start_time": "20:00",
+      "rhythm": "14-tägig",
+      "language": "Deutsch",
+      "target_group": "18–30 Jahre",
+      "topic": "Berufung, Beziehungen, Alltag",
+      "max_participants": 18,
+      "current_participants": 11,
+      "signup_open": true,
+      "visibility": "public",
+      "status": "published",
+      "short_description": "Für junge Erwachsene, die Glauben praktisch leben wollen."
+    },
+    {
+      "title": "Gebetsgruppe Online",
+      "leader_name": "Anna Schneider",
+      "district": "Online",
+      "weekday": "Dienstag",
+      "start_time": "20:00",
+      "rhythm": "wöchentlich",
+      "language": "Deutsch/Russisch",
+      "target_group": "Alle",
+      "topic": "Gebet und Fürbitte",
+      "max_participants": 25,
+      "current_participants": 16,
+      "signup_open": true,
+      "visibility": "request_only",
+      "status": "published",
+      "short_description": "Online-Gebetsgruppe für Gemeinde, Familien und Stadt."
+    }
+  ],
+  "courses": [
+    {
+      "title": "Glaubensgrundkurs",
+      "category": "Glauben kennenlernen",
+      "start_date": "2026-05-12",
+      "start_time": "19:00",
+      "duration_text": "6 Abende",
+      "location": "Seminarraum 1",
+      "leader_name": "Pastor Daniel Hoffmann",
+      "max_participants": 20,
+      "signup_open": true,
+      "status": "published",
+      "short_description": "Für alle, die die Grundlagen des christlichen Glaubens verstehen möchten."
+    },
+    {
+      "title": "Taufkurs",
+      "category": "Taufe",
+      "start_date": "2026-05-23",
+      "start_time": "10:00",
+      "duration_text": "3 Termine",
+      "location": "Gemeindezentrum",
+      "leader_name": "Maria Hoffmann",
+      "max_participants": 12,
+      "signup_open": true,
+      "status": "published",
+      "short_description": "Vorbereitung auf Taufe, Bekenntnis und neues Leben mit Christus."
+    },
+    {
+      "title": "Mitgliedschaftskurs",
+      "category": "Gemeinde",
+      "start_date": "2026-06-06",
+      "start_time": "10:00",
+      "duration_text": "2 Samstage",
+      "location": "Seminarraum 2",
+      "leader_name": "Viktor Neumann",
+      "max_participants": 16,
+      "signup_open": true,
+      "status": "published",
+      "short_description": "Wie Gemeinde funktioniert, wofür wir stehen und wie man Teil wird."
+    },
+    {
+      "title": "Mitarbeiterschulung",
+      "category": "Dienen",
+      "start_date": "2026-06-18",
+      "start_time": "18:30",
+      "duration_text": "4 Abende",
+      "location": "Hauptsaal",
+      "leader_name": "Markus Weber",
+      "max_participants": 25,
+      "signup_open": true,
+      "status": "published",
+      "short_description": "Grundlagen für Dienst, Verantwortung und geistliche Reife."
+    }
+  ],
+  "volunteer_areas": [
+    {
+      "title": "Kinderarbeit",
+      "category": "Generationen",
+      "contact_person": "Elena Fischer",
+      "training_required": true,
+      "child_protection_required": true,
+      "short_description": "Kinder während des Gottesdienstes begleiten, lehren und schützen."
+    },
+    {
+      "title": "Lobpreis",
+      "category": "Gottesdienst",
+      "contact_person": "Anna Schneider",
+      "training_required": true,
+      "child_protection_required": false,
+      "short_description": "Musik, Gesang und geistliche Atmosphäre im Gottesdienst."
+    },
+    {
+      "title": "Medien & Technik",
+      "category": "Medien",
+      "contact_person": "Viktor Neumann",
+      "training_required": true,
+      "child_protection_required": false,
+      "short_description": "Ton, Beamer, Livestream, Kamera und technische Vorbereitung."
+    },
+    {
+      "title": "Empfang",
+      "category": "Gastfreundschaft",
+      "contact_person": "Julia Weber",
+      "training_required": false,
+      "child_protection_required": false,
+      "short_description": "Neue Besucher begrüßen und Orientierung geben."
+    },
+    {
+      "title": "Café / Küche",
+      "category": "Gastfreundschaft",
+      "contact_person": "Nina Berger",
+      "training_required": false,
+      "child_protection_required": false,
+      "short_description": "Begegnung nach dem Gottesdienst praktisch möglich machen."
+    },
+    {
+      "title": "Diakonie",
+      "category": "Hilfe",
+      "contact_person": "Maria Hoffmann",
+      "training_required": true,
+      "child_protection_required": false,
+      "short_description": "Praktische Hilfe für Menschen in Not und Besuchsdienst."
+    }
+  ],
+  "news": [
+    {
+      "title": "Neuer Glaubensgrundkurs startet im Mai",
+      "category": "Kurse",
+      "publish_date": "2026-05-01",
+      "featured": true,
+      "excerpt": "Ab Mai beginnt ein neuer Kurs für alle, die den christlichen Glauben besser verstehen möchten."
+    },
+    {
+      "title": "Jugendfreizeit 2026 in Vorbereitung",
+      "category": "Jugend",
+      "publish_date": "2026-05-08",
+      "featured": false,
+      "excerpt": "Das Jugendteam plant eine Freizeit mit Bibelarbeiten, Gemeinschaft, Sport und Gebetszeiten."
+    },
+    {
+      "title": "Diakonie-Team besucht Senioren",
+      "category": "Diakonie",
+      "publish_date": "2026-05-15",
+      "featured": false,
+      "excerpt": "Unser Besuchsdienst möchte ältere Menschen regelmäßig ermutigen und praktisch unterstützen."
+    }
+  ],
+  "testimonies": [
+    {
+      "title": "Ich habe neu Hoffnung gefunden",
+      "display_name": "Michael, 34",
+      "anonymous": false,
+      "consent_given": true,
+      "status": "published",
+      "text": "Ich kam zum ersten Mal in die Gemeinde, ohne genau zu wissen, was ich suche. Durch Gemeinschaft und Predigt habe ich neu verstanden, dass Gott mich nicht vergessen hat."
+    },
+    {
+      "title": "Gemeinschaft hat mein Leben verändert",
+      "display_name": "Anonym",
+      "anonymous": true,
+      "consent_given": true,
+      "status": "published",
+      "text": "Nach einer schweren Zeit fand ich durch Gebet, Gespräche und Kleingruppe wieder Hoffnung und Stabilität."
+    },
+    {
+      "title": "Glaube im Alltag gelernt",
+      "display_name": "Lena, 19",
+      "anonymous": false,
+      "consent_given": true,
+      "status": "published",
+      "text": "In der Jugendgruppe habe ich gelernt, meinen Glauben nicht nur sonntags, sondern im Alltag zu leben."
+    }
+  ],
+  "requests_examples": {
+    "smallgroup_request": {
+      "smallgroup_title": "Junge Erwachsene",
+      "first_name": "Sophie",
+      "last_name": "Keller",
+      "email": "sophie.keller@example.test",
+      "phone": "+49 711 000000",
+      "message": "Ich bin neu in Stuttgart und suche eine Kleingruppe für junge Erwachsene.",
+      "status": "new",
+      "consent_privacy": true
+    },
+    "course_signup": {
+      "course_title": "Glaubensgrundkurs",
+      "first_name": "Nikolai",
+      "last_name": "Schmidt",
+      "email": "nikolai.schmidt@example.test",
+      "status": "confirmed",
+      "consent_privacy": true
+    },
+    "event_signup": {
+      "event_title": "Gemeindefest",
+      "first_name": "Anna",
+      "last_name": "Bauer",
+      "participants_count": 3,
+      "email": "anna.bauer@example.test",
+      "status": "confirmed",
+      "consent_privacy": true
+    },
+    "volunteer_request": {
+      "volunteer_area": "Medien & Technik",
+      "first_name": "Leon",
+      "last_name": "Maier",
+      "availability": "Sonntagvormittag und Mittwochabend",
+      "experience": "Kamera und Ton in Schule/YouTube-Projekten.",
+      "status": "reviewed",
+      "consent_privacy": true
+    },
+    "prayer_request_simple": {
+      "category": "Familie",
+      "prayer_text": "Bitte betet für Frieden und Weisheit in einer schwierigen Familienentscheidung.",
+      "response_requested": false,
+      "may_share_anonymized": false,
+      "sensitivity_flag": "normal",
+      "status": "new",
+      "consent_privacy": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+ID;Epic;Aufgabe;Priorität;Abhängigkeit;DoD
+P4-001;Security;Login-Schutz für Mitgliederbereich definieren;Kritisch;Phase 3 Gate;Ohne Login kein Zugriff
+P4-002;Rollen;Mitgliederrollen und Capabilities definieren;Kritisch;P4-001;Rollenmatrix dokumentiert
+P4-003;Datenmodell;Mitgliederprofil definieren;Hoch;P4-002;Status/Felder definiert
+P4-004;Datenmodell;Interne Termine definieren;Mittel;P4-002;target_roles/teams vorhanden
+P4-005;Datenmodell;Dienstplan-Modell definieren;Hoch;P4-002;Team-Sichtbarkeit definiert
+P4-006;Datenmodell;Interne Dokumente definieren;Kritisch;P4-001;Dateizugriff geschützt
+P4-007;Datenmodell;Schulungsmodell definieren;Mittel;P4-003;Completion-Status definiert
+P4-008;Admin;Admin-Menü Mitgliederbereich planen;Hoch;P4-003–P4-007;Menüpunkte definiert
+P4-009;Demo;Demo-Mitglieder, Teams, Dienstpläne erstellen;Mittel;P4-003–P4-007;Demo-Daten markiert/löschbar
+P4-010;QA;Phase-4-Testplan ausführen;Kritisch;alle;NO-GO bei öffentlichem Dateiabruf

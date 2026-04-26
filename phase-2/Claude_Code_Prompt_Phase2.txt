@@ -1,0 +1,117 @@
+Du arbeitest als Senior WordPress Architect und Full-Stack Entwickler.
+
+Projekt:
+Gemeindeportal „Christus ist mein Leben“.
+
+Aufgabe:
+Setze Phase 2 technisch um. Verwende die bestehende Phase-1-Struktur, erfinde nichts visuell neu und halte die Trennung zwischen Frontend-Theme und Core-Logik ein.
+
+Phase 2 umfasst:
+- Kleingruppen
+- Kurse / Nächste Schritte
+- Mitarbeit / Dienen
+- Event-Anmeldungen
+- News / Berichte
+- Zeugnisse
+- einfache Gebetsanliegen
+
+Nicht bauen:
+- Seelsorge-Fallverwaltung
+- vertrauliche Gebetsteam-Plattform
+- Mitgliederbereich
+- Dienstpläne
+- interne Dokumente
+- Kinderschutz-Meldeformular
+- Zahlungsabwicklung
+
+Nutze die Demo-Daten aus `phase2-demo-data.json`.
+
+Technische Schritte:
+1. Registriere Taxonomien:
+   - smallgroup_category
+   - smallgroup_language
+   - smallgroup_location
+   - course_category
+   - course_level
+   - news_category
+   - testimony_category
+   - volunteer_category
+   - request_status
+
+2. Registriere Custom Post Types:
+   - ciml_smallgroup
+   - ciml_course
+   - ciml_volunteer_area
+   - ciml_news
+   - ciml_testimony
+
+3. Ergänze Formular-Entry-Typen:
+   - ciml_smallgroup_request
+   - ciml_course_signup
+   - ciml_event_signup
+   - ciml_volunteer_request
+   - ciml_testimony_submission
+   - ciml_prayer_request_simple
+
+4. Erstelle Meta-Felder gemäß Spezifikation:
+   - alle Felder aus `Phase2_Technische_Umsetzung.md`
+
+5. Erweitere Admin-Menü:
+   CImL Portal
+   - Inhalte
+   - Anfragen
+   - Einstellungen
+
+6. Erstelle Rollen/Capabilities:
+   - ciml_manager
+   - ciml_editor
+   - ciml_event_manager
+   - ciml_smallgroup_coordinator
+   - ciml_course_manager
+   - ciml_ministry_leader
+   - ciml_prayer_reviewer
+
+7. Baue Frontend-Templates:
+   - Kleingruppen-Übersicht mit Filtern
+   - Kurs-Übersicht
+   - Mitarbeit-Übersicht
+   - News-Grid
+   - Zeugnisse-Grid
+   - einfache Gebetsanliegen-Seite
+
+8. Baue Formulare:
+   - Kleingruppe anfragen
+   - Kurs anmelden
+   - Event anmelden
+   - Mitarbeit anfragen
+   - Zeugnis einreichen
+   - einfaches Gebetsanliegen senden
+
+Pflicht für alle Formulare:
+- Nonce/CSRF-Schutz
+- Honeypot
+- serverseitige Validierung
+- Sanitizing
+- Escaping
+- Datenschutz-Checkbox
+- keine öffentliche Ausgabe personenbezogener Daten
+- keine REST-Ausgabe der Anfrage-Daten
+
+9. Baue Demo-Daten-Importer:
+   - Demo-Daten installieren
+   - Demo-Daten löschen
+   - Demo-Daten im Admin markieren
+
+10. Teste:
+   - CPTs sichtbar
+   - Frontend liest Daten
+   - Formulare validieren
+   - Anfragen erscheinen nur intern
+   - Rollenprüfung funktioniert
+   - keine Phase-3-Daten werden verarbeitet
+
+Wichtig:
+Bestehende visuelle Qualität erhalten.
+Keine sensiblen Module halb bauen.
+Keine Anfrage-Daten öffentlich anzeigen.
+Besucher dürfen niemals Bearbeitungsfunktionen sehen.

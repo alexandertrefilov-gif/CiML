@@ -1,0 +1,224 @@
+{
+  "project": {
+    "name": "Christus ist mein Leben",
+    "phase": "Phase 4 – Mitgliederbereich",
+    "warning": "DEMO-DATEN – vor Livegang ersetzen."
+  },
+  "teams": [
+    {
+      "id": "team_worship",
+      "name": "Lobpreis",
+      "leader": "Anna Schneider"
+    },
+    {
+      "id": "team_media",
+      "name": "Medien & Technik",
+      "leader": "Viktor Neumann"
+    },
+    {
+      "id": "team_welcome",
+      "name": "Empfang",
+      "leader": "Julia Weber"
+    },
+    {
+      "id": "team_kids",
+      "name": "Kinderarbeit",
+      "leader": "Elena Fischer"
+    },
+    {
+      "id": "team_diaconia",
+      "name": "Diakonie",
+      "leader": "Maria Hoffmann"
+    },
+    {
+      "id": "team_smallgroups",
+      "name": "Kleingruppenleitung",
+      "leader": "Markus Weber"
+    }
+  ],
+  "members": [
+    {
+      "name": "Daniel Hoffmann",
+      "role": "ciml_leadership",
+      "teams": [
+        "Leitung"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Maria Hoffmann",
+      "role": "ciml_leadership",
+      "teams": [
+        "Diakonie"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Anna Schneider",
+      "role": "ciml_team_leader",
+      "teams": [
+        "Lobpreis",
+        "Medien & Technik"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Viktor Neumann",
+      "role": "ciml_team_leader",
+      "teams": [
+        "Medien & Technik"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Elena Fischer",
+      "role": "ciml_team_leader",
+      "teams": [
+        "Kinderarbeit"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Markus Weber",
+      "role": "ciml_team_leader",
+      "teams": [
+        "Kleingruppenleitung"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Leon Maier",
+      "role": "ciml_team_member",
+      "teams": [
+        "Medien & Technik"
+      ],
+      "status": "pending"
+    },
+    {
+      "name": "Julia Weber",
+      "role": "ciml_team_member",
+      "teams": [
+        "Empfang"
+      ],
+      "status": "active"
+    }
+  ],
+  "internal_events": [
+    {
+      "title": "Mitarbeiterabend",
+      "date": "2026-06-12",
+      "time": "19:00",
+      "target": "alle Mitarbeiter",
+      "status": "published"
+    },
+    {
+      "title": "Leitungstreffen",
+      "date": "2026-06-17",
+      "time": "18:30",
+      "target": "Leitung",
+      "status": "published"
+    },
+    {
+      "title": "Technik-Probe",
+      "date": "2026-06-20",
+      "time": "16:00",
+      "target": "Medien & Technik",
+      "status": "published"
+    }
+  ],
+  "roster": [
+    {
+      "date": "2026-06-14",
+      "service": "Sonntag 10:00",
+      "slot": "Lobpreisleitung",
+      "assigned": "Anna Schneider",
+      "status": "confirmed"
+    },
+    {
+      "date": "2026-06-14",
+      "service": "Sonntag 10:00",
+      "slot": "Ton",
+      "assigned": "Viktor Neumann",
+      "status": "confirmed"
+    },
+    {
+      "date": "2026-06-14",
+      "service": "Sonntag 10:00",
+      "slot": "Beamer",
+      "assigned": "Leon Maier",
+      "status": "draft"
+    },
+    {
+      "date": "2026-06-14",
+      "service": "Sonntag 10:00",
+      "slot": "Empfang",
+      "assigned": "Julia Weber",
+      "status": "confirmed"
+    },
+    {
+      "date": "2026-06-14",
+      "service": "Sonntag 10:00",
+      "slot": "Kinderarbeit",
+      "assigned": "Elena Fischer",
+      "status": "confirmed"
+    }
+  ],
+  "documents": [
+    {
+      "title": "Mitarbeiter-Leitfaden",
+      "category": "Leitfaden",
+      "version": "1.0",
+      "target": "alle Mitarbeiter"
+    },
+    {
+      "title": "Schutzkonzept Kurzfassung",
+      "category": "Schulung",
+      "version": "0.9 Demo",
+      "target": "Kinderarbeit / Leitung"
+    },
+    {
+      "title": "Technik-Checkliste",
+      "category": "Checkliste",
+      "version": "1.2",
+      "target": "Medien & Technik"
+    },
+    {
+      "title": "Lobpreis-Ablauf",
+      "category": "Leitfaden",
+      "version": "1.1",
+      "target": "Lobpreis"
+    },
+    {
+      "title": "Empfangsleitfaden",
+      "category": "Leitfaden",
+      "version": "1.0",
+      "target": "Empfang"
+    }
+  ],
+  "trainings": [
+    {
+      "title": "Grundlagen Mitarbeit",
+      "required": true,
+      "target": "alle Mitarbeiter",
+      "status": "active"
+    },
+    {
+      "title": "Datenschutz im Dienst",
+      "required": true,
+      "target": "alle Mitarbeiter",
+      "status": "active"
+    },
+    {
+      "title": "Kinderschutz-Basisschulung",
+      "required": true,
+      "target": "Kinderarbeit",
+      "status": "active"
+    },
+    {
+      "title": "Technik-Einweisung",
+      "required": false,
+      "target": "Medien & Technik",
+      "status": "active"
+    }
+  ]
+}

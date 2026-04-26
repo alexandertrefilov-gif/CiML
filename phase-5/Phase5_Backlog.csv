@@ -1,0 +1,13 @@
+ID;Epic;Aufgabe;Priorität;Abhängigkeit;DoD
+P5-001;Audit;Audit-Log-Datenmodell definieren;Hoch;Phase 4;Eventtypen und Felder definiert
+P5-002;Workflow;Freigabe-Workflow definieren;Hoch;P5-001;Status und Rollen dokumentiert
+P5-003;Backup;Backup-/Restore-Konzept erstellen;Kritisch;Phase 4;Backup/Restore/Pre-Release geregelt
+P5-004;DSGVO;Export-/Löschprozess definieren;Kritisch;P5-001;Statuslogik und Rollen definiert
+P5-005;Rollen;Rollen-Review-Prozess definieren;Hoch;Phase 4;monatlicher/quartalsweiser Review
+P5-006;Status;Systemstatus-Dashboard planen;Mittel;P5-001–P5-005;Statuskacheln definiert
+P5-007;Wartung;Wartungsmodus spezifizieren;Mittel;P5-006;Aktivierung/Protokollierung definiert
+P5-008;Release;Release-Gate und Rollback definieren;Kritisch;P5-003;GO/NO-GO Checkliste steht
+P5-009;Incident;Incident-Prozess definieren;Hoch;P5-001;SEV und Status definiert
+P5-010;Doku;Betriebsdokumentation strukturieren;Mittel;alle;Pflichtdokumente aufgelistet
+P5-011;Demo;Governance-Demo-Daten vorbereiten;Mittel;P5-006;Demo-Status/Audit/Release/Incident sichtbar
+P5-012;QA;Phase-5-Abnahme durchführen;Kritisch;alle;Testplan bestanden

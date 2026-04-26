@@ -1,0 +1,21 @@
+ID;Epic;Aufgabe;Priorität;Abhängigkeit;DoD
+P2-001;Taxonomien;Phase-2-Taxonomien registrieren;Hoch;Phase 1 Core;Taxonomien im Admin sichtbar
+P2-002;CPT;ciml_smallgroup registrieren;Hoch;P2-001;Kleingruppen mit Meta-Feldern speicherbar
+P2-003;CPT;ciml_course registrieren;Hoch;P2-001;Kurse mit Meta-Feldern speicherbar
+P2-004;CPT;ciml_volunteer_area registrieren;Hoch;P2-001;Mitarbeit-Bereiche speicherbar
+P2-005;CPT;ciml_news registrieren;Mittel;P2-001;News veröffentlichbar
+P2-006;CPT;ciml_testimony registrieren;Mittel;P2-001;Zeugnisse mit Einwilligungsfeldern speicherbar
+P2-007;Formulare;Kleingruppen-Anfrage bauen;Hoch;P2-002;Formular validiert und speichert intern
+P2-008;Formulare;Kurs-Anmeldung bauen;Hoch;P2-003;Formular validiert und speichert intern
+P2-009;Formulare;Event-Anmeldung erweitern;Hoch;Phase 1 Events;Teilnehmerlimit und Warteliste funktionieren
+P2-010;Formulare;Mitarbeit-Anfrage bauen;Hoch;P2-004;Anfrage intern sichtbar
+P2-011;Formulare;Zeugnis-Einreichung bauen;Mittel;P2-006;Keine automatische Veröffentlichung
+P2-012;Formulare;Einfaches Gebetsanliegen bauen;Hoch;Security Rules;Nicht öffentlich, Sensitivity-Flag vorhanden
+P2-013;Admin;Admin-Menü Phase 2 erweitern;Hoch;P2-002–P2-012;Inhalte/Anfragen/Einstellungen sichtbar
+P2-014;Rollen;Phase-2-Rollen und Capabilities erstellen;Hoch;P2-013;Rollenprüfung bestanden
+P2-015;Demo;Demo-Daten-Importer bauen;Mittel;P2-002–P2-006;Installieren/Löschen möglich
+P2-016;Frontend;Kleingruppen-Frontend mit Filtern;Hoch;P2-002;Filter und Karten sichtbar
+P2-017;Frontend;Kurs-Frontend;Hoch;P2-003;Kurskarten und Anmeldung sichtbar
+P2-018;Frontend;Mitarbeit-Frontend;Mittel;P2-004;Mitarbeit-Bereiche sichtbar
+P2-019;Frontend;News/Zeugnisse-Frontend;Mittel;P2-005/P2-006;Nur veröffentlichte Inhalte sichtbar
+P2-020;QA;Sicherheit und Abnahme testen;Hoch;alle;Testplan bestanden

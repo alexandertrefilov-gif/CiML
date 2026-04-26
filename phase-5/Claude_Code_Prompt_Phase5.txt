@@ -1,0 +1,59 @@
+Du arbeitest als Senior WordPress Architect, Security Engineer und Operations Lead.
+
+Projekt:
+Gemeindeportal „Christus ist mein Leben“.
+
+Aufgabe:
+Bereite Phase 5 „Governance und Betrieb“ vor und setze die Betriebsstruktur um.
+
+Phase 5 umfasst:
+- Audit-Log
+- Freigabe-Workflow
+- Backup-/Restore-Konzept
+- Export-/Löschprozess
+- Rollen-Review
+- Systemstatus
+- Wartungsmodus
+- Release-Gates
+- Incident-Prozess
+- Dokumentationsstruktur
+
+Nicht bauen:
+- neue große Frontend-Funktionen
+- neue Seelsorgeprozesse
+- neue Mitgliederfunktionen
+- automatische Löschung ohne Prüfung
+- produktive Zahlungsabwicklung
+
+Pflicht:
+1. Änderungen und sensible Zugriffe protokollieren.
+2. Veröffentlichungen über Freigabe-Workflow steuern.
+3. Pre-Release-Backup vor jedem Release verlangen.
+4. Rollback-Plan dokumentieren.
+5. Export/Löschung nur berechtigt und protokolliert.
+6. Rollen regelmäßig reviewen.
+7. Wartungsmodus auditieren.
+8. Incident-Prozess mit SEV1–SEV4 definieren.
+9. Demo-Daten klar markieren.
+10. Systemstatus im Admin sichtbar machen.
+
+Nutze:
+- Phase5_Governance_und_Betrieb.md
+- phase5-demo-data.json
+- Phase5_Test_und_Abnahme.md
+
+Admin-Menü:
+CImL Portal
+- Governance
+  - Systemstatus
+  - Audit-Log
+  - Freigaben
+  - Backups / Restore
+  - Export / Löschung
+  - Rollen-Review
+  - Wartungsmodus
+  - Releases
+  - Incidents
+  - Dokumentation
+
+Wenn ein Betriebspunkt nicht sicher implementiert werden kann, markiere BLOCKER und baue keine unsichere Teilfunktion.
