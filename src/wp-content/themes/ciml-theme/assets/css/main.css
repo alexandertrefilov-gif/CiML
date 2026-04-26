@@ -90,6 +90,12 @@ body {
 	line-height: 1.72;
 }
 
+.section-header {
+	margin: 0 auto clamp(2.4rem, 4.8vw, 4rem);
+	max-width: 760px;
+	text-align: center;
+}
+
 .site-header {
 	background: rgba(255, 255, 255, 0.97);
 	border-bottom: 1px solid var(--ciml-gray-100);
@@ -293,6 +299,255 @@ body {
 	font-size: 2rem;
 }
 
+.grid-3,
+.grid-4 {
+	display: grid;
+	gap: 1.35rem;
+}
+
+.grid-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4 {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card {
+	background: #fff;
+	border: 1px solid var(--ciml-gray-100);
+	border-radius: var(--ciml-radius-xl);
+	overflow: hidden;
+}
+
+.card-img {
+	aspect-ratio: 16 / 10;
+	background: var(--ciml-gray-100);
+	overflow: hidden;
+	position: relative;
+}
+
+.card-img img,
+.team-photo img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.card-body {
+	padding: 1.35rem 1.45rem;
+}
+
+.card-title {
+	color: var(--ciml-navy);
+	font-family: var(--ciml-head);
+	font-size: 1.32rem;
+	line-height: 1.22;
+	margin: 0 0 0.55rem;
+}
+
+.card-text {
+	color: var(--ciml-gray-600);
+	font-size: 0.93rem;
+	line-height: 1.62;
+}
+
+.tag {
+	background: var(--ciml-gray-100);
+	border-radius: 999px;
+	color: var(--ciml-gray-600);
+	display: inline-flex;
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 0.24rem 0.65rem;
+}
+
+.tag.gold {
+	background: var(--ciml-gold-pale);
+	color: #805c17;
+}
+
+.tag.blue {
+	background: #e4eef7;
+	color: #2d5e8e;
+}
+
+.tag.green {
+	background: #e2f1ea;
+	color: #2e7d5b;
+}
+
+.ministry-card {
+	align-items: flex-end;
+	background: var(--ciml-navy);
+	border-radius: var(--ciml-radius-xl);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+	display: flex;
+	min-height: 285px;
+	overflow: hidden;
+	position: relative;
+}
+
+.ministry-card img {
+	height: 100%;
+	inset: 0;
+	object-fit: cover;
+	opacity: 0.82;
+	position: absolute;
+	width: 100%;
+}
+
+.ministry-card::after {
+	background: linear-gradient(0deg, rgba(7, 18, 33, 0.9), rgba(7, 18, 33, 0.3), rgba(7, 18, 33, 0.05));
+	content: "";
+	inset: 0;
+	position: absolute;
+}
+
+.ministry-body {
+	color: #fff;
+	padding: 1.35rem;
+	position: relative;
+	z-index: 2;
+}
+
+.ministry-body h3 {
+	font-family: var(--ciml-head);
+	font-size: 1.45rem;
+	margin: 0 0 0.35rem;
+}
+
+.ministry-body p {
+	color: rgba(255, 255, 255, 0.78);
+	font-size: 0.88rem;
+	line-height: 1.45;
+}
+
+.admin-marker {
+	color: var(--ciml-gold-light);
+	display: inline-flex;
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.05em;
+	margin-top: 0.75rem;
+	text-transform: uppercase;
+}
+
+.sermon-card .card-img {
+	aspect-ratio: 16 / 9;
+	background: var(--ciml-navy);
+}
+
+.play {
+	align-items: center;
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	position: absolute;
+}
+
+.play span {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.94);
+	border-radius: 50%;
+	color: var(--ciml-navy);
+	display: flex;
+	height: 54px;
+	justify-content: center;
+	width: 54px;
+}
+
+.meta {
+	color: var(--ciml-gray-600);
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 0.8rem;
+	gap: 0.5rem;
+}
+
+.events-list {
+	display: grid;
+	gap: 1rem;
+}
+
+.event-row {
+	align-items: center;
+	background: #fff;
+	border: 1px solid var(--ciml-gray-100);
+	border-radius: var(--ciml-radius-lg);
+	display: grid;
+	gap: 1.15rem;
+	grid-template-columns: 70px 1fr auto;
+	padding: 1rem 1.1rem;
+}
+
+.datebox {
+	border-right: 1px solid var(--ciml-gray-100);
+	padding-right: 1rem;
+	text-align: center;
+}
+
+.datebox strong {
+	color: var(--ciml-navy);
+	display: block;
+	font-family: var(--ciml-head);
+	font-size: 2rem;
+	line-height: 1;
+}
+
+.datebox span {
+	color: var(--ciml-gold);
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.event-title {
+	color: var(--ciml-navy);
+	font-family: var(--ciml-head);
+	font-size: 1.24rem;
+	font-weight: 700;
+}
+
+.event-sub {
+	color: var(--ciml-gray-600);
+	font-size: 0.9rem;
+}
+
+.team-card {
+	text-align: center;
+}
+
+.team-photo {
+	aspect-ratio: 1;
+	background: var(--ciml-gray-100);
+	border-radius: var(--ciml-radius-xl);
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+
+.team-name {
+	color: var(--ciml-navy);
+	font-family: var(--ciml-head);
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.team-role {
+	color: var(--ciml-gold);
+	font-size: 0.84rem;
+	font-weight: 800;
+	margin: 0.15rem 0 0.45rem;
+}
+
+.team-bio {
+	color: var(--ciml-gray-600);
+	font-size: 0.86rem;
+	line-height: 1.55;
+}
+
 .fade-in {
 	opacity: 0;
 	transform: translateY(24px);
@@ -306,6 +561,8 @@ body {
 
 @media (max-width: 1100px) {
 	.info-grid,
+	.grid-3,
+	.grid-4,
 	.split,
 	.stats {
 		grid-template-columns: 1fr;
@@ -327,5 +584,17 @@ body {
 
 	.hero {
 		min-height: 70vh;
+	}
+
+	.event-row {
+		grid-template-columns: 1fr;
+	}
+
+	.datebox {
+		border-bottom: 1px solid var(--ciml-gray-100);
+		border-right: 0;
+		padding-bottom: 0.7rem;
+		padding-right: 0;
+		text-align: left;
 	}
 }

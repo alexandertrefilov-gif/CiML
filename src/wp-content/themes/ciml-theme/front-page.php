@@ -21,6 +21,11 @@ get_header();
 	get_template_part( 'template-parts/sections/service-bar' );
 	get_template_part( 'template-parts/sections/first-visit' );
 	get_template_part( 'template-parts/sections/community-profile' );
+	get_template_part( 'template-parts/sections/beliefs' );
+	get_template_part( 'template-parts/sections/ministries' );
+	get_template_part( 'template-parts/sections/sermons' );
+	get_template_part( 'template-parts/sections/events' );
+	get_template_part( 'template-parts/sections/team' );
 	?>
 </main>
 
