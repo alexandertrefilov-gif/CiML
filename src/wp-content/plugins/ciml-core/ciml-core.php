@@ -19,12 +19,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'CIML_CORE_VERSION', '0.1.0' );
 define( 'CIML_CORE_FILE', __FILE__ );
 define( 'CIML_CORE_DIR', plugin_dir_path( __FILE__ ) );
+define( 'CIML_CORE_INCLUDES_DIR', CIML_CORE_DIR . 'includes/' );
 
 /**
  * Load text domain and future core modules.
  */
 function ciml_core_bootstrap() {
 	load_plugin_textdomain( 'ciml-core', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
+	$bootstrap_file = CIML_CORE_INCLUDES_DIR . 'bootstrap.php';
+
+	if ( file_exists( $bootstrap_file ) ) {
+		require_once $bootstrap_file;
+	}
 }
 add_action( 'plugins_loaded', 'ciml_core_bootstrap' );
 
@@ -43,4 +50,3 @@ function ciml_core_deactivate() {
 	flush_rewrite_rules();
 }
 register_deactivation_hook( __FILE__, 'ciml_core_deactivate' );
-
