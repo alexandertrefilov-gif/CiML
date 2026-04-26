@@ -1,0 +1,15 @@
+{
+  "name": "ciml/phase-1-skeleton",
+  "description": "Development tooling for the CiML Phase 1 WordPress skeleton.",
+  "type": "project",
+  "license": "proprietary",
+  "require-dev": {
+    "phpunit/phpunit": "^12.0"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
