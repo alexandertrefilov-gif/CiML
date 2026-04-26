@@ -1,0 +1,58 @@
+/*
+Theme Name: CiML Theme
+Theme URI: https://github.com/alexandertrefilov-gif/CiML
+Author: CiML Project
+Description: Presentation layer for the Christus ist mein Leben portal. Phase 1 skeleton only.
+Version: 0.1.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 8.0
+Text Domain: ciml-theme
+*/
+
+:root {
+	--navy: #17385c;
+	--navy-dark: #0e2138;
+	--gold: #c8922a;
+	--gold-light: #e3b75b;
+	--cream: #fbf8f2;
+	--paper: #ffffff;
+	--gray-100: #eeece7;
+	--gray-600: #68645d;
+	--gray-800: #36332d;
+	--ff-head: "Cormorant Garamond", Georgia, serif;
+	--ff-body: "Source Sans 3", system-ui, sans-serif;
+}
+
+body {
+	background: var(--paper);
+	color: var(--gray-800);
+	font-family: var(--ff-body);
+	margin: 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1320px;
+	padding: 0 2rem;
+}
+
+.section {
+	padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.site-header,
+.site-footer {
+	background: var(--paper);
+	border-color: var(--gray-100);
+}
+
+.phase-1-placeholder {
+	background: var(--cream);
+}
+
+.phase-1-placeholder h1,
+.phase-1-placeholder h2 {
+	color: var(--navy);
+	font-family: var(--ff-head);
+}
