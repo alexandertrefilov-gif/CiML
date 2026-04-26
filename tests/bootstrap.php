@@ -53,3 +53,9 @@ if ( ! function_exists( 'flush_rewrite_rules' ) ) {
 		return true;
 	}
 }
+
+if ( ! function_exists( 'absint' ) ) {
+	function absint( $maybeint ) {
+		return abs( (int) $maybeint );
+	}
+}

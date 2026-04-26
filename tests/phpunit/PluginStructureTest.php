@@ -134,4 +134,51 @@ final class PluginStructureTest extends TestCase {
 			$this->assertNotContains( 'ciml_contact_message', $definition['object_type'] );
 		}
 	}
+
+	public function test_read_only_helper_public_content_list_contains_exactly_five_cpts(): void {
+		require_once $this->plugin_dir . '/includes/helpers/register.php';
+
+		$expected_post_types = array(
+			'ciml_belief_item',
+			'ciml_ministry',
+			'ciml_sermon',
+			'ciml_event',
+			'ciml_team_member',
+		);
+
+		$actual_post_types = ciml_core_get_public_content_post_types();
+
+		sort( $expected_post_types );
+		sort( $actual_post_types );
+
+		$this->assertSame( $expected_post_types, $actual_post_types );
+	}
+
+	public function test_contact_message_is_not_allowed_for_read_only_helpers(): void {
+		require_once $this->plugin_dir . '/includes/helpers/register.php';
+
+		$this->assertFalse( ciml_core_is_public_content_post_type( 'ciml_contact_message' ) );
+	}
+
+	public function test_query_args_for_allowed_public_content_are_read_only(): void {
+		require_once $this->plugin_dir . '/includes/helpers/register.php';
+
+		$args = ciml_core_get_public_content_query_args( 'ciml_sermon', 7 );
+
+		$this->assertSame( 'ciml_sermon', $args['post_type'] );
+		$this->assertSame( 'publish', $args['post_status'] );
+		$this->assertSame( 7, $args['posts_per_page'] );
+		$this->assertTrue( $args['no_found_rows'] );
+		$this->assertTrue( $args['ignore_sticky_posts'] );
+		$this->assertFalse( $args['update_post_meta_cache'] );
+		$this->assertFalse( $args['update_post_term_cache'] );
+		$this->assertArrayNotHasKey( 'meta_query', $args );
+		$this->assertArrayNotHasKey( 'tax_query', $args );
+	}
+
+	public function test_query_args_for_forbidden_public_content_return_safe_fallback(): void {
+		require_once $this->plugin_dir . '/includes/helpers/register.php';
+
+		$this->assertSame( array(), ciml_core_get_public_content_query_args( 'ciml_contact_message' ) );
+	}
 }
