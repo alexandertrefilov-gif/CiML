@@ -90,4 +90,48 @@ final class PluginStructureTest extends TestCase {
 
 		$this->assertArrayNotHasKey( 'ciml_contact_message', ciml_core_get_public_post_types() );
 	}
+
+	public function test_taxonomy_registration_function_exists(): void {
+		require_once $this->plugin_dir . '/includes/taxonomies/register.php';
+
+		$this->assertTrue( function_exists( 'ciml_core_register_taxonomies' ) );
+		$this->assertTrue( function_exists( 'ciml_core_get_public_taxonomies' ) );
+	}
+
+	public function test_taxonomy_registration_is_hooked_to_init(): void {
+		$contents = file_get_contents( $this->plugin_dir . '/includes/taxonomies/register.php' );
+
+		$this->assertIsString( $contents );
+		$this->assertMatchesRegularExpression(
+			"/add_action\\(\\s*'init'\\s*,\\s*'ciml_core_register_taxonomies'\\s*\\)/",
+			$contents
+		);
+	}
+
+	public function test_allowed_public_taxonomy_list_contains_exactly_five_taxonomies(): void {
+		require_once $this->plugin_dir . '/includes/taxonomies/register.php';
+
+		$expected_taxonomies = array(
+			'ciml_ministry_category',
+			'ciml_sermon_series',
+			'ciml_sermon_speaker',
+			'ciml_event_category',
+			'ciml_team_role',
+		);
+
+		$actual_taxonomies = array_keys( ciml_core_get_public_taxonomies() );
+
+		sort( $expected_taxonomies );
+		sort( $actual_taxonomies );
+
+		$this->assertSame( $expected_taxonomies, $actual_taxonomies );
+	}
+
+	public function test_no_taxonomy_targets_contact_message_post_type(): void {
+		require_once $this->plugin_dir . '/includes/taxonomies/register.php';
+
+		foreach ( ciml_core_get_public_taxonomies() as $definition ) {
+			$this->assertNotContains( 'ciml_contact_message', $definition['object_type'] );
+		}
+	}
 }
