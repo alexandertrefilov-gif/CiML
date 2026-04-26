@@ -42,6 +42,20 @@ function ciml_theme_enqueue_assets() {
 		array(),
 		CIML_THEME_VERSION
 	);
+
+	wp_enqueue_style(
+		'ciml-theme-main',
+		get_template_directory_uri() . '/assets/css/main.css',
+		array( 'ciml-theme-style' ),
+		CIML_THEME_VERSION
+	);
+
+	wp_enqueue_script(
+		'ciml-theme-main',
+		get_template_directory_uri() . '/assets/js/main.js',
+		array(),
+		CIML_THEME_VERSION,
+		true
+	);
 }
 add_action( 'wp_enqueue_scripts', 'ciml_theme_enqueue_assets' );
-
